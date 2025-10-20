@@ -3,136 +3,55 @@
 ## Project Overview
 - **Project Type**: Next.js 15 + TypeScript + Tailwind CSS
 - **Purpose**: Build a modern, elegant wedding website template
-- **Status**: Phase 1 complete - Foundation and layout components created
+- **Status**: Phase 2 complete - Core sections with animations and Embla carousel
 
 ---
 
 ## Libraries Installed
 
 ### Production Dependencies
-1. **embla-carousel-react** (^8.6.0) - Image carousel for gallery/slider sections
-2. **embla-carousel-autoplay** (^8.6.0) - Auto-play functionality for carousels
-3. **framer-motion** (^12.23.24) - Smooth animations and transitions
+1. **embla-carousel-react** (^8.6.0) - Image carousel for gallery/slider sections ✅ Used
+2. **embla-carousel-autoplay** (^8.6.0) - Auto-play functionality for carousels ✅ Used
+3. **framer-motion** (^12.23.24) - Smooth animations and transitions ✅ Used
 4. **react-hook-form** (^7.65.0) - Form state management for RSVP & contact forms
-5. **zod** (^4.1.12) - Schema validation for form data
+5. **zod** (^4.1.12) - Schema validation for form data ✅ Schemas created
 
 ### Dev Dependencies
 - TypeScript, ESLint, Tailwind CSS v4, Next.js 15.5.6
 
 ---
 
-## Component Analysis & Structure
-
-### Page Layout Structure
-The wedding template will consist of the following main sections:
-
-#### 1. **Navigation/Header Component** ✅
-   - Sticky navigation bar
-   - Logo/brand name
-   - Navigation links (Home, Our Story, Gallery, Events, RSVP, Contact)
-   - Mobile hamburger menu (responsive)
-
-#### 2. **Hero Section** ✅
-   - Full-screen background image or video
-   - Couple's names in elegant typography
-   - Wedding date/location
-   - Call-to-action buttons (RSVP, Scroll to explore)
-
-#### 3. **About/Our Story Section** ✅
-   - Text content about the couple
-   - Timeline of relationship milestones
-   - Profile images of couple
-
-#### 4. **Gallery/Photo Section** ✅ (placeholder)
-   - Image grid layout
-   - Embla carousel for image galleries
-   - Lightbox functionality (optional)
-   - Multiple albums (pre-wedding, engagement, etc.)
-
-#### 5. **Wedding Events Section** ✅
-   - Event cards (Ceremony, Reception, etc.)
-   - Date, time, location for each event
-   - Map integration (optional)
-   - Event details modal
-
-#### 6. **RSVP Form Section** ✅ (placeholder)
-   - Input fields: Name, Email, Phone, Number of guests
-   - Dropdown: Attendance confirmation (Yes/No/Maybe)
-   - Dietary preferences
-   - Comments/Special requests
-   - Form validation with Zod + React Hook Form
-   - Success/error messages
-
-#### 7. **Contact Section** ✅
-   - Contact information
-   - Contact form
-   - Social media links
-   - Location/venue details
-
-#### 8. **Footer** ✅
-   - Copyright information
-   - Quick links
-   - Social media icons
-
----
-
-## Component File Structure
+## Component File Structure (Updated)
 
 ```
 src/
 ├── app/
 │   ├── layout.tsx ✅ (main layout wrapper with Header & Footer)
-│   ├── page.tsx ✅ (homepage - main entry with all sections)
+│   ├── page.tsx ✅ (homepage - imports all section components)
 │   ├── globals.css (global styles with Tailwind)
 │   └── favicon.ico
 │
 ├── components/
-│   ├── Header.tsx ✅ (navigation)
-│   ├── Hero.tsx (hero section - integrated in page.tsx)
-│   ├── OurStory.tsx (about section - integrated in page.tsx)
-│   ├── Gallery.tsx (photo gallery with Embla carousel)
-│   ├── Events.tsx (wedding events - integrated in page.tsx)
-│   ├── RSVPForm.tsx (RSVP form with validation)
-│   ├── Contact.tsx (contact section - integrated in page.tsx)
-│   ├── Footer.tsx ✅ (footer)
+│   ├── Header.tsx ✅ (sticky navigation with mobile menu)
+│   ├── Hero.tsx ✅ (hero section with Framer Motion animations)
+│   ├── OurStory.tsx ✅ (timeline with 4 milestone events)
+│   ├── Gallery.tsx ✅ (Embla carousel + album filters + grid)
+│   ├── Events.tsx ✅ (timeline of 4 wedding events with icons)
+│   ├── Footer.tsx ✅ (footer with links and social)
 │   └── common/
-│       ├── Button.tsx ✅
-│       ├── Card.tsx ✅
-│       └── Container.tsx ✅
+│       ├── Button.tsx ✅ (3 variants: primary, secondary, outline)
+│       ├── Card.tsx ✅ (reusable card with hover effect)
+│       └── Container.tsx ✅ (max-width wrapper)
 │
 ├── types/
-│   └── index.ts ✅ (TypeScript interfaces/types)
+│   └── index.ts ✅ (7 TypeScript interfaces)
 │
 ├── lib/
-│   ├── formSchema.ts ✅ (Zod validation schemas)
-│   └── utils.ts ✅ (utility functions)
+│   ├── formSchema.ts ✅ (2 Zod schemas: RSVP, Contact)
+│   └── utils.ts ✅ (4 utility functions)
 │
-└── styles/ (optional, if needed beyond Tailwind)
-    └── theme.css (custom CSS variables for colors)
+└── styles/ (optional)
 ```
-
----
-
-## Design & Animation Considerations
-
-### Framer Motion Usage
-- Fade-in animations on scroll for sections
-- Smooth transitions between pages
-- Image reveal animations in gallery
-- Button hover effects
-- Form validation animations
-
-### Tailwind CSS Styling
-- Elegant, modern color scheme (whites, golds, soft pastels)
-- Responsive design (mobile-first approach)
-- Custom fonts (Geist + elegant serif for headings)
-- Spacing and typography consistency
-
-### Embla Carousel Features
-- Auto-play gallery carousels
-- Touch/swipe navigation
-- Responsive slide sizing
-- Dot indicators for navigation
 
 ---
 
@@ -149,23 +68,32 @@ src/
 - [x] Build page layout with all sections
 - [x] Integration test (build successful)
 
-### Phase 2: Core Sections (Next)
-- [ ] Enhance Hero section with animations
-- [ ] Build dedicated OurStory component with timeline
-- [ ] Build dedicated Events component with detailed cards
-- [ ] Build Gallery component with Embla carousel
+### Phase 2: Core Sections ✅ COMPLETE
+- [x] Build Hero section with Framer Motion animations
+- [x] Build OurStory component with 4-event timeline
+- [x] Build Events component with 4 wedding events + venue cards
+- [x] Build Gallery component with:
+  - [x] Embla carousel with autoplay
+  - [x] Album filter buttons (all, engagement, pre-wedding, couple)
+  - [x] Navigation dots for carousel
+  - [x] Responsive image grid
+  - [x] Hover animations on gallery items
+- [x] Implement scroll animations across all sections
+- [x] Production build successful (0 errors)
 
-### Phase 3: Forms & Interactivity
+### Phase 3: Forms & Interactivity (Next)
 - [ ] Create dedicated RSVPForm component with React Hook Form
+- [ ] Integrate form validation with Zod schemas
 - [ ] Build Contact form component
 - [ ] Add form submission handling (API route or email service)
+- [ ] Add success/error messages with animations
 
 ### Phase 4: Polish & Optimization
-- [ ] Add Framer Motion animations throughout
-- [ ] Responsive design testing
-- [ ] Performance optimization
-- [ ] SEO optimization
+- [ ] Responsive design testing (mobile, tablet, desktop)
+- [ ] Performance optimization & image lazy loading
+- [ ] SEO optimization (meta tags, structured data)
 - [ ] Cross-browser testing
+- [ ] Accessibility audit
 
 ### Phase 5: Deployment
 - [ ] Build and test production build
@@ -173,67 +101,131 @@ src/
 
 ---
 
-## Key Features to Implement
+## Phase 2 Completion Summary
 
-✓ **Responsive Design** - Mobile, tablet, desktop
-✓ **Image Carousels** - Embla carousel for galleries
-✓ **Form Validation** - Zod + React Hook Form
-✓ **Smooth Animations** - Framer Motion transitions
-✓ **Dark Mode Support** - Tailwind dark mode
-✓ **Accessibility** - Semantic HTML, ARIA labels
-✓ **SEO Friendly** - Meta tags, structured data
-✓ **Performance** - Next.js optimization, image lazy loading
+**New Components Created:**
+
+1. **Hero.tsx** - Full-screen hero section with:
+   - Animated gradient background blobs
+   - Staggered text animations (names, date, description)
+   - Smooth scroll indicator at bottom
+   - Call-to-action buttons
+
+2. **OurStory.tsx** - Relationship timeline with:
+   - 4 milestone events (2018 to 2024)
+   - Numbered timeline dots with gradient
+   - Connected timeline lines (desktop)
+   - Additional love story section with image
+
+3. **Gallery.tsx** - Complete gallery section with:
+   - Embla carousel with autoplay functionality
+   - Album filtering (all/engagement/pre-wedding/couple)
+   - Carousel navigation dots
+   - Responsive image grid (1/2/3 columns)
+   - Hover scale animations on images
+
+4. **Events.tsx** - Wedding events timeline with:
+   - 4 events: Ceremony, Cocktail, Dinner, Brunch
+   - Timeline layout with numbered dots
+   - Icons for each event
+   - Date, time, location with SVG icons
+   - Venue information cards section
+
+**Key Features Implemented:**
+
+✅ **Framer Motion Animations:**
+- Container variants with staggered children
+- whileInView animations (trigger on scroll)
+- whileHover and whileTap interactions
+- Smooth transitions throughout
+
+✅ **Embla Carousel:**
+- Auto-play with infinite loop
+- Responsive slides
+- Manual dot navigation
+- Album filtering updates carousel content
+
+✅ **Responsive Design:**
+- Mobile-first approach
+- Tailwind breakpoints (sm, md, lg)
+- Flexible grid layouts
+- Touch-friendly interactive elements
+
+✅ **Dark Mode Support:**
+- All components use dark: prefix for dark mode
+- Tested and working throughout
+
+✅ **Build Status:**
+- Production build: ✅ Successful
+- File size: 49 kB (route) + 164 kB (First Load JS)
+- No TypeScript errors
+- No ESLint errors
+- All components compile correctly
 
 ---
 
-## Notes for Development
+## What's Working Now
 
-1. **Image Handling**: Use Next.js Image component for optimization
-2. **Color Theme**: Define custom colors in Tailwind config for consistency
-3. **Fonts**: Consider adding elegant serif fonts via `next/font`
-4. **API Routes**: Create `/api/contact` and `/api/rsvp` for form submissions
-5. **Environment Variables**: Setup `.env.local` for API endpoints if needed
-6. **Testing**: Consider adding unit tests for form validation
+### Animated Sections (all with scroll-triggered animations):
+1. **Hero** - Fade in + float animations + scroll indicator
+2. **Our Story** - Timeline with numbered dots and connecting lines
+3. **Gallery** - Carousel with album filtering + image grid
+4. **Events** - Event timeline with venue information
+5. **RSVP** - Placeholder section ready for form
+6. **Contact** - 3 info cards with hover effects
+
+### Navigation Features:
+- Sticky header with smooth scroll to sections
+- Responsive mobile hamburger menu
+- All nav links functional
+
+### Visual Polish:
+- Gradient backgrounds (amber to rose theme)
+- Card shadows and hover effects
+- Emoji icons for visual interest
+- Consistent spacing and typography
+
+---
+
+## Notes for Phase 3 (Forms)
+
+To implement Phase 3, you'll need to:
+
+1. **Create RSVPForm.tsx component:**
+   - Use React Hook Form with useForm hook
+   - Integrate RSVPFormSchema validation from `lib/formSchema.ts`
+   - Form fields: name, email, phone, numberOfGuests, attendance, dietaryPreferences, comments
+   - Add error message display
+   - Loading state during submission
+
+2. **Create Contact form (or inline in page):**
+   - Use React Hook Form
+   - Integrate ContactFormSchema validation
+   - Form fields: name, email, subject, message
+   - Success/error toast notifications
+
+3. **API Routes:**
+   - Create `src/app/api/rsvp/route.ts` - Handle RSVP submissions
+   - Create `src/app/api/contact/route.ts` - Handle contact submissions
+   - Optional: Email integration with service like SendGrid, Resend, or Nodemailer
 
 ---
 
 ## Commands to Remember
 
 ```bash
-# Development
+# Development (with Turbopack for fast refresh)
 npm run dev
 
-# Build
+# Production build
 npm run build
 
-# Linting
-npm run lint
-
-# Production
+# Start production server
 npm run start
+
+# Linting check
+npm run lint
 ```
-
----
-
-## Phase 1 Completion Summary
-
-**Completed Tasks:**
-- ✅ TypeScript types and interfaces defined (`src/types/index.ts`)
-- ✅ Zod validation schemas created for RSVP and Contact forms
-- ✅ Utility functions implemented (classNames, scrollToSection, formatDate, formatPhoneNumber)
-- ✅ Reusable Button component with variants (primary, secondary, outline)
-- ✅ Reusable Card component with hover effect option
-- ✅ Reusable Container component for consistent layout
-- ✅ Header component with sticky positioning and responsive mobile menu
-- ✅ Footer component with quick links and social media
-- ✅ Main page structure with all 6 sections (Hero, Story, Gallery, Events, RSVP, Contact)
-- ✅ Root layout updated with Header/Footer integration
-- ✅ Production build successful (0 errors)
-
-**Next Steps:**
-- Proceed to Phase 2: Create dedicated section components (OurStory, Gallery, Events)
-- Add Embla carousel to Gallery section
-- Implement Framer Motion animations
 
 ---
 
@@ -242,4 +234,7 @@ npm run start
 - [x] Libraries installed (Embla, Framer Motion, React Hook Form, Zod)
 - [x] Project structure documented
 - [x] Phase 1: Foundation components created
-- [ ] Phase 2: Core sections development
+- [x] Phase 2: Core sections with animations complete
+- [ ] Phase 3: Forms & interactivity (next step)
+- [ ] Phase 4: Polish & optimization
+- [ ] Phase 5: Deployment
