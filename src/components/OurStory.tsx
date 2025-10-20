@@ -1,32 +1,6 @@
 'use client';
-
-import { TimelineEvent } from '@/types';
 import { motion } from 'framer-motion';
-import Card from './common/Card';
 import Container from './common/Container';
-
-const timelineEvents: TimelineEvent[] = [
-  {
-    year: '2018',
-    title: 'We Met',
-    description: 'Our journey began on a beautiful summer evening when fate brought us together at a coffee shop in the city.',
-  },
-  {
-    year: '2020',
-    title: 'We Fell in Love',
-    description: 'Every moment spent together felt like a dream come true. We knew this was something special.',
-  },
-  {
-    year: '2023',
-    title: 'He Proposed',
-    description: 'The perfect moment when he asked the question we both wanted to hear under the stars.',
-  },
-  {
-    year: '2024',
-    title: 'We Say "I Do"',
-    description: 'Now we celebrate our love and commitment surrounded by our loved ones.',
-  },
-];
 
 export default function OurStory() {
   const containerVariants = {
@@ -59,7 +33,7 @@ export default function OurStory() {
           viewport={{ once: true }}
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-4 text-gray-900 dark:text-white">
-            Our Story
+            Our Love Story
           </h2>
           <div className="w-16 h-1 bg-gradient-to-r from-amber-500 to-rose-500 mx-auto mb-4" />
           <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
@@ -67,77 +41,130 @@ export default function OurStory() {
           </p>
         </motion.div>
 
-        {/* Timeline */}
+        {/* Story Cards Carousel */}
         <motion.div
-          className="grid md:grid-cols-4 gap-6 md:gap-4"
+          className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
         >
-          {timelineEvents.map((event, index) => (
+          {[1, 2, 3].map((item) => (
             <motion.div
-              key={event.year}
+              key={item}
               variants={itemVariants}
-              className="relative"
+              whileHover={{ y: -10 }}
+              className="relative group overflow-hidden rounded-2xl shadow-lg"
             >
-              {/* Timeline line */}
-              {index < timelineEvents.length - 1 && (
-                <div className="hidden md:block absolute top-16 left-1/2 w-px h-32 bg-gradient-to-b from-amber-300 to-transparent" />
-              )}
-
-              {/* Timeline dot */}
-              <motion.div
-                className="relative z-10 mb-6"
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                <div className="w-12 h-12 mx-auto bg-gradient-to-br from-amber-400 to-rose-400 rounded-full flex items-center justify-center text-white font-bold shadow-lg">
-                  {index + 1}
-                </div>
-              </motion.div>
-
-              {/* Card */}
-              <Card className="h-full">
-                <p className="text-sm font-semibold text-amber-600 dark:text-amber-400 mb-2">
-                  {event.year}
-                </p>
-                <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">
-                  {event.title}
-                </h3>
-                <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
-                  {event.description}
-                </p>
-              </Card>
+              <div className="aspect-video bg-gradient-to-br from-amber-200 to-rose-200 dark:from-gray-700 dark:to-gray-600 flex items-center justify-center text-8xl relative">
+                👰💍
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              </div>
             </motion.div>
           ))}
         </motion.div>
 
-        {/* Additional story section */}
+        {/* Groom & Bride Profile Section */}
         <motion.div
-          className="mt-16 pt-12 border-t border-gray-200 dark:border-gray-700"
+          className="mb-12"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          viewport={{ once: true }}
+        >
+          <div className="grid grid-cols-2 gap-8 md:gap-12">
+            {/* Groom */}
+            <motion.div
+              className="text-center"
+              whileHover={{ scale: 1.05 }}
+              transition={{ type: 'spring', stiffness: 300 }}
+            >
+              <div className="w-32 h-32 md:w-40 md:h-40 mx-auto mb-6 rounded-2xl overflow-hidden shadow-lg">
+                <div className="w-full h-full bg-gradient-to-br from-amber-200 to-yellow-200 dark:from-gray-600 dark:to-gray-500 flex items-center justify-center text-7xl">
+                  🤵
+                </div>
+              </div>
+              <h3 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-2">
+                Groom
+              </h3>
+              <p className="text-gray-600 dark:text-gray-400">Nama lengkap mempelai</p>
+            </motion.div>
+
+            {/* Bride */}
+            <motion.div
+              className="text-center"
+              whileHover={{ scale: 1.05 }}
+              transition={{ type: 'spring', stiffness: 300 }}
+            >
+              <div className="w-32 h-32 md:w-40 md:h-40 mx-auto mb-6 rounded-2xl overflow-hidden shadow-lg">
+                <div className="w-full h-full bg-gradient-to-br from-rose-200 to-pink-200 dark:from-gray-600 dark:to-gray-500 flex items-center justify-center text-7xl">
+                  👰
+                </div>
+              </div>
+              <h3 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-2">
+                Bride
+              </h3>
+              <p className="text-gray-600 dark:text-gray-400">Nama lengkap mempelai</p>
+            </motion.div>
+          </div>
+        </motion.div>
+
+        {/* Events Cards Section */}
+        <motion.div
+          className="mt-12 pt-12 border-t border-gray-200 dark:border-gray-700"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.3 }}
           viewport={{ once: true }}
         >
-          <div className="grid md:grid-cols-2 gap-8 items-center">
-            <div className="aspect-square bg-gradient-to-br from-amber-200 to-rose-200 dark:from-gray-700 dark:to-gray-600 rounded-lg flex items-center justify-center text-7xl">
-              💕
-            </div>
-            <div>
-              <h3 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
-                Our Love Story
+          <div className="grid md:grid-cols-2 gap-6">
+            {/* Akad Nikah Card */}
+            <motion.div
+              className="bg-gradient-to-br from-gray-100 to-gray-50 dark:from-gray-800 dark:to-gray-700 rounded-2xl p-8 text-center shadow-lg hover:shadow-xl transition-shadow"
+              whileHover={{ y: -5 }}
+            >
+              <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+                Akad Nikah
               </h3>
-              <p className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed">
-                From the moment we met, we knew our lives would never be the same. Every laugh, every adventure, 
-                and every quiet moment together has brought us closer to this special day.
-              </p>
-              <p className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed">
-                We are grateful for everyone who has supported us on this journey and we can&apos;t wait to celebrate 
-                our love with you.
-              </p>
-            </div>
+              <div className="space-y-3">
+                <p className="text-gray-600 dark:text-gray-400">
+                  <span className="block text-sm font-semibold text-gray-500 dark:text-gray-500 mb-1">CEREMONY</span>
+                  <span className="text-lg font-semibold text-gray-900 dark:text-white">Thursday, March 11th, 2021</span>
+                </p>
+                <p className="text-amber-600 dark:text-amber-400 text-xl font-bold">
+                  07.00 WIB
+                </p>
+              </div>
+              <div className="mt-6 pt-6 border-t border-gray-300 dark:border-gray-600">
+                <p className="text-sm text-gray-600 dark:text-gray-400">
+                  Akad nikah akan dilaksanakan di Mesjid Baitus Salam dengan dihadiri oleh keluarga dan sahabat terdekat.
+                </p>
+              </div>
+            </motion.div>
+
+            {/* Resepsi Nikah Card */}
+            <motion.div
+              className="bg-gradient-to-br from-gray-100 to-gray-50 dark:from-gray-800 dark:to-gray-700 rounded-2xl p-8 text-center shadow-lg hover:shadow-xl transition-shadow"
+              whileHover={{ y: -5 }}
+            >
+              <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+                Resepsi Nikah
+              </h3>
+              <div className="space-y-3">
+                <p className="text-gray-600 dark:text-gray-400">
+                  <span className="block text-sm font-semibold text-gray-500 dark:text-gray-500 mb-1">RECEPTION</span>
+                  <span className="text-lg font-semibold text-gray-900 dark:text-white">Thursday, March 11th, 2021</span>
+                </p>
+                <p className="text-amber-600 dark:text-amber-400 text-xl font-bold">
+                  18.00 WIB
+                </p>
+              </div>
+              <div className="mt-6 pt-6 border-t border-gray-300 dark:border-gray-600">
+                <p className="text-sm text-gray-600 dark:text-gray-400">
+                  Acara resepsi akan diselenggarakan dengan suasana yang meriah, penuh dengan kebersamaan dan kebahagiaan.
+                </p>
+              </div>
+            </motion.div>
           </div>
         </motion.div>
       </Container>

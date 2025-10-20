@@ -1,8 +1,6 @@
 'use client';
 
-import { scrollToSection } from '@/lib/utils';
 import { motion } from 'framer-motion';
-import Button from './common/Button';
 import Container from './common/Container';
 
 export default function Hero() {
@@ -43,72 +41,30 @@ export default function Hero() {
         transition={{ duration: 8, repeat: Infinity, delay: 1 }}
       />
 
-      <Container className="text-center relative z-10">
-        <motion.div variants={containerVariants} initial="hidden" animate="visible">
-          <motion.h1
-            variants={itemVariants}
-            className="text-6xl md:text-7xl lg:text-8xl font-bold mb-6 text-gray-900 dark:text-white"
-          >
-            Sarah & John
-          </motion.h1>
-
-          <motion.p
-            variants={itemVariants}
-            className="text-2xl md:text-3xl lg:text-4xl text-amber-600 dark:text-amber-400 mb-4 font-light"
-          >
-            June 15, 2024
-          </motion.p>
-
-          <motion.p
-            variants={itemVariants}
-            className="text-xl md:text-2xl text-gray-700 dark:text-gray-300 mb-8 max-w-2xl mx-auto"
-          >
-            Join us for our wedding celebration as we embark on this beautiful journey together
-          </motion.p>
-
-          <motion.div
-            variants={itemVariants}
-            className="flex gap-4 justify-center flex-wrap"
-          >
-            <Button
-              size="lg"
-              onClick={() => scrollToSection('rsvp')}
-              className="hover:scale-105 transition-transform"
-            >
-              RSVP Now
-            </Button>
-            <Button
-              variant="outline"
-              size="lg"
-              onClick={() => scrollToSection('story')}
-              className="hover:scale-105 transition-transform"
-            >
-              Our Story
-            </Button>
-          </motion.div>
+      <Container className="text-center relative z-10 w-full">
+        {/* Hero Image with overlay */}
+        <motion.div
+          className="mb-12 relative overflow-hidden rounded-3xl shadow-2xl"
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.8 }}
+        >
+          <div className="aspect-video bg-gradient-to-br from-amber-200 via-rose-200 to-pink-200 dark:from-gray-700 dark:via-gray-600 dark:to-gray-500 flex items-center justify-center text-9xl relative">
+            📷
+            {/* Overlay */}
+            <div className="absolute inset-0 bg-black/40 flex items-end justify-center p-8">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.5, duration: 0.6 }}
+                className="text-white text-center"
+              >
+                <h2 className="text-2xl md:text-3xl font-light">Thursday, March 11th, 2021</h2>
+              </motion.div>
+            </div>
+          </div>
         </motion.div>
       </Container>
-
-      {/* Scroll indicator */}
-      <motion.div
-        className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
-        animate={{ y: [0, 10, 0] }}
-        transition={{ duration: 2, repeat: Infinity }}
-      >
-        <svg
-          className="w-6 h-6 text-gray-400"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M19 14l-7 7m0 0l-7-7m7 7V3"
-          />
-        </svg>
-      </motion.div>
     </section>
   );
 }

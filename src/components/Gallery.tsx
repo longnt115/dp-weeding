@@ -133,7 +133,7 @@ export default function Gallery() {
 
         {/* Carousel Controls */}
         <motion.div
-          className="flex gap-2 justify-center mb-12"
+          className="flex gap-2 justify-center"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.1 }}
@@ -151,31 +151,6 @@ export default function Gallery() {
                   : 'bg-gray-300 dark:bg-gray-600'
               }`}
             />
-          ))}
-        </motion.div>
-
-        {/* Gallery Grid */}
-        <motion.div
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-        >
-          {filteredImages.map((image) => (
-            <motion.div
-              key={image.id}
-              variants={itemVariants}
-              whileHover={{ y: -10 }}
-              className="overflow-hidden rounded-lg shadow-md"
-            >
-              <motion.div
-                className="aspect-square bg-gradient-to-br from-amber-200 to-rose-200 dark:from-gray-700 dark:to-gray-600 flex items-center justify-center text-6xl hover:bg-gradient-to-tl transition-all"
-                whileHover={{ scale: 1.1 }}
-              >
-                {image.src}
-              </motion.div>
-            </motion.div>
           ))}
         </motion.div>
       </Container>
