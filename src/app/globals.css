@@ -1,15 +1,32 @@
 @import "tailwindcss";
 
 :root {
+  /* Wedding Theme Colors */
+  --color-primary-dark: #3a3a3a;
+  --color-primary-light: #f5f5f5;
+  --color-accent-gold: #d4af37;
+  --color-text-dark: #404040;
+  --color-text-secondary: #666666;
+  --color-border: #e0e0e0;
+  
+  /* Legacy variables for compatibility */
   --background: #ffffff;
   --foreground: #171717;
 }
 
 @theme inline {
+  --color-primary: var(--color-primary-dark);
+  --color-accent: var(--color-accent-gold);
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  
+  /* Custom color palette */
+  --color-wedding-dark: #3a3a3a;
+  --color-wedding-light: #f5f5f5;
+  --color-wedding-gold: #d4af37;
+  --color-wedding-gray: #4a4a4a;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -23,4 +40,38 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Utility classes for wedding theme */
+.text-wedding-primary {
+  @apply text-[#3a3a3a];
+}
+
+.text-wedding-secondary {
+  @apply text-[#666666];
+}
+
+.bg-wedding-light {
+  @apply bg-[#f5f5f5];
+}
+
+.bg-wedding-dark {
+  @apply bg-[#3a3a3a];
+}
+
+.text-wedding-gold {
+  @apply text-[#d4af37];
+}
+
+.border-wedding {
+  @apply border-[#e0e0e0];
+}
+
+/* Button styling with gold accent */
+.btn-wedding-primary {
+  @apply bg-[#3a3a3a] text-white hover:bg-[#2a2a2a] transition-colors;
+}
+
+.btn-wedding-accent {
+  @apply bg-[#d4af37] text-[#3a3a3a] hover:bg-[#c9a961] transition-colors font-semibold;
 }

@@ -1,7 +1,6 @@
-'use client';
-import { motion } from 'framer-motion';
-import { useEffect, useState } from 'react';
-import Container from './common/Container';
+"use client";
+import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
 
 interface TimeLeft {
   days: number;
@@ -12,17 +11,17 @@ interface TimeLeft {
 
 export default function Countdown() {
   const [timeLeft, setTimeLeft] = useState<TimeLeft>({
-    days: 147,
-    hours: 22,
-    minutes: 50,
-    seconds: 50,
+    days: 0,
+    hours: 0,
+    minutes: 0,
+    seconds: 0,
   });
 
   useEffect(() => {
-    // Set target wedding date
-    const weddingDate = new Date('2024-06-15T10:30:00').getTime();
+    // Set the wedding date (update this to your actual wedding date)
+    const weddingDate = new Date("2025-11-14T00:00:00").getTime();
 
-    const timer = setInterval(() => {
+    const calculateTimeLeft = () => {
       const now = new Date().getTime();
       const difference = weddingDate - now;
 
@@ -33,9 +32,24 @@ export default function Countdown() {
           minutes: Math.floor((difference / 1000 / 60) % 60),
           seconds: Math.floor((difference / 1000) % 60),
         });
+      } else {
+        // Wedding date has passed
+        setTimeLeft({
+          days: 0,
+          hours: 0,
+          minutes: 0,
+          seconds: 0,
+        });
       }
-    }, 1000);
+    };
 
+    // Calculate immediately on mount
+    calculateTimeLeft();
+
+    // Update every second
+    const timer = setInterval(calculateTimeLeft, 1000);
+
+    // Cleanup interval on unmount
     return () => clearInterval(timer);
   }, []);
 
@@ -61,30 +75,32 @@ export default function Countdown() {
   const CountdownCard = ({
     value,
     label,
+    className = "",
   }: {
     value: number;
     label: string;
+    className?: string;
   }) => (
     <motion.div
       variants={itemVariants}
-      className="flex flex-col items-center"
+      className={`flex flex-col items-center ${className}`}
     >
       <div className="relative">
-        <div className="w-20 h-20 md:w-24 md:h-24 bg-gradient-to-br from-amber-400 to-rose-400 rounded-lg flex items-center justify-center shadow-lg">
+        <div className="w-20 h-20 md:w-24 md:h-24 bg-gradient-to-br from-[#d4af37] to-[#c9a961] rounded-lg flex items-center justify-center shadow-lg">
           <span className="text-3xl md:text-4xl font-bold text-white">
-            {String(value).padStart(2, '0')}
+            {String(value).padStart(2, "0")}
           </span>
         </div>
       </div>
-      <p className="mt-3 text-gray-700 dark:text-gray-300 font-semibold uppercase text-sm md:text-base">
+      <p className="mt-3 text-white dark:text-[#b0b0b0] font-semibold uppercase text-sm md:text-base">
         {label}
       </p>
     </motion.div>
   );
 
   return (
-    <section className="py-16 bg-gradient-to-r from-slate-900 to-gray-900 dark:from-slate-900 dark:to-gray-900">
-      <Container>
+    <section className="md:max-width-[768px] py-16 bg-gradient-to-r from-[#f5f5f5] to-[#e8e8e8]">
+      <div className="rounded-3xl mx-auto px-4 sm:px-6 lg:px-8 max-w-5xl bg-gray-700">
         <motion.div
           className="text-center mb-12"
           initial={{ opacity: 0, y: -30 }}
@@ -92,27 +108,39 @@ export default function Countdown() {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-white dark:text-white mb-2">
-            Counting Down to Our Big Day
+          <h2 className="text-3xl md:text-4xl font-bold text-white dark:text-white mb-2 pt-6">
+            Counting Days
           </h2>
-          <p className="text-gray-300 dark:text-gray-300">
+          <p className="text-[#b0b0b0] dark:text-[#b0b0b0]">
             We can&apos;t wait to celebrate with you!
           </p>
         </motion.div>
 
         <motion.div
-          className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6"
+          className="flex flex-row justify-center pb-6"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
         >
-          <CountdownCard value={timeLeft.days} label="Days" />
-          <CountdownCard value={timeLeft.hours} label="Hours" />
-          <CountdownCard value={timeLeft.minutes} label="Minutes" />
+          <CountdownCard
+            className="mr-[3.5rem]"
+            value={timeLeft.days}
+            label="Days"
+          />
+          <CountdownCard
+            className="mr-[3.5rem]"
+            value={timeLeft.hours}
+            label="Hours"
+          />
+          <CountdownCard
+            className="mr-[3.5rem]"
+            value={timeLeft.minutes}
+            label="Minutes"
+          />
           <CountdownCard value={timeLeft.seconds} label="Seconds" />
         </motion.div>
-      </Container>
+      </div>
     </section>
   );
 }

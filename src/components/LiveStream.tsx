@@ -9,22 +9,22 @@ export default function LiveStream() {
       icon: '📘',
       name: 'Facebook',
       handle: '@sarahjohn2024',
-      color: 'from-blue-500 to-blue-600',
-      hoverColor: 'hover:from-blue-600 hover:to-blue-700',
+      color: 'from-[#d4af37] to-[#c9a961]',
+      hoverColor: 'hover:from-[#c9a961] hover:to-[#b8975b]',
     },
     {
       icon: '📷',
       name: 'Instagram',
       handle: '@sarahjohn.wedding',
-      color: 'from-pink-500 to-rose-500',
-      hoverColor: 'hover:from-pink-600 hover:to-rose-600',
+      color: 'from-[#d4af37] to-[#c9a961]',
+      hoverColor: 'hover:from-[#c9a961] hover:to-[#b8975b]',
     },
     {
       icon: '▶️',
       name: 'YouTube',
       handle: 'Sarah & John Wedding',
-      color: 'from-red-500 to-red-600',
-      hoverColor: 'hover:from-red-600 hover:to-red-700',
+      color: 'from-[#3a3a3a] to-[#2a2a2a]',
+      hoverColor: 'hover:from-[#2a2a2a] hover:to-[#1a1a1a]',
     },
   ];
 
@@ -48,7 +48,7 @@ export default function LiveStream() {
   };
 
   return (
-    <section className="py-16 bg-gradient-to-r from-gray-50 to-amber-50 dark:from-gray-800 dark:to-gray-900">
+    <section className="py-16 bg-gradient-to-r from-[#f5f5f5] to-white dark:from-[#2a2a2a] dark:to-[#3a3a3a]">
       <Container>
         <motion.div
           className="text-center mb-12"
@@ -57,10 +57,10 @@ export default function LiveStream() {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-2">
+          <h2 className="text-3xl md:text-4xl font-bold text-[#3a3a3a] dark:text-white mb-2">
             Follow Our Live Stream
           </h2>
-          <p className="text-gray-600 dark:text-gray-400">
+          <p className="text-[#666666] dark:text-[#b0b0b0]">
             Bergabunglah dengan kami secara online di media sosial favorit Anda
           </p>
         </motion.div>
@@ -88,7 +88,6 @@ export default function LiveStream() {
                   animate={{ x: [0, 10, 0], y: [0, -10, 0] }}
                   transition={{ duration: 3, repeat: Infinity }}
                 />
-
                 {/* Content */}
                 <div className="relative z-10 text-center">
                   <div className="text-6xl mb-4">{platform.icon}</div>
@@ -96,7 +95,7 @@ export default function LiveStream() {
                   <p className="text-sm mb-6 text-white/90">{platform.handle}</p>
                   <Button
                     size="sm"
-                    className="bg-white text-gray-900 hover:bg-gray-100"
+                    className="bg-white text-[#3a3a3a] hover:bg-[#f5f5f5]"
                   >
                     Follow Now
                   </Button>
@@ -113,7 +112,7 @@ export default function LiveStream() {
           transition={{ duration: 0.6, delay: 0.4 }}
           viewport={{ once: true }}
         >
-          <p className="text-gray-600 dark:text-gray-400 mb-4">
+          <p className="text-[#666666] dark:text-[#b0b0b0] mb-4">
             🔴 Acara akan disiarkan langsung pada hari H. Jangan sampai ketinggalan!
           </p>
         </motion.div>

@@ -45,7 +45,7 @@ export default function WeddingGifts() {
   };
 
   return (
-    <section className="py-20 bg-white dark:bg-gray-900">
+    <section className="py-20 bg-white dark:bg-[#2a2a2a]">
       <Container>
         <motion.div
           className="text-center mb-16"
@@ -54,11 +54,11 @@ export default function WeddingGifts() {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-gray-900 dark:text-white">
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-[#3a3a3a] dark:text-white">
             Wedding Gifts
           </h2>
-          <div className="w-16 h-1 bg-gradient-to-r from-amber-500 to-rose-500 mx-auto mb-4" />
-          <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+          <div className="w-16 h-1 bg-gradient-to-r from-[#d4af37] to-[#c9a961] mx-auto mb-4" />
+          <p className="text-lg text-[#666666] dark:text-[#b0b0b0] max-w-2xl mx-auto">
             Kehadiran Anda adalah hadiah terbesar bagi kami. Namun jika Anda ingin memberikan hadiah, berikut beberapa pilihan
           </p>
         </motion.div>
@@ -77,18 +77,17 @@ export default function WeddingGifts() {
               whileHover={{ y: -10 }}
               className="relative group"
             >
-              <div className="bg-gradient-to-br from-amber-50 to-rose-50 dark:from-gray-800 dark:to-gray-700 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 h-full flex flex-col">
+              <div className="bg-gradient-to-br from-[#f5f5f5] to-[#e8e8e8] rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 h-full flex flex-col border border-[#e0e0e0] dark:border-[#555555]">
                 {/* Decorative top border */}
-                <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-amber-400 to-rose-400 rounded-t-2xl" />
-
+                <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#d4af37] to-[#c9a961] rounded-t-2xl" />
                 <div className="text-5xl mb-4">{gift.icon}</div>
-                <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-3">
+                <h3 className="text-2xl font-bold text-[#3a3a3a] dark:text-white mb-3">
                   {gift.title}
                 </h3>
-                <p className="text-gray-600 dark:text-gray-400 mb-4 flex-grow">
+                <p className="text-[#666666] dark:text-[#b0b0b0] mb-4 flex-grow">
                   {gift.description}
                 </p>
-                <p className="text-sm text-gray-500 dark:text-gray-500 whitespace-pre-line font-mono mb-6">
+                <p className="text-sm text-[#999999] dark:text-[#888888] whitespace-pre-line font-mono mb-6">
                   {gift.details}
                 </p>
                 <Button
@@ -104,16 +103,16 @@ export default function WeddingGifts() {
         </motion.div>
 
         <motion.div
-          className="bg-gradient-to-r from-amber-100 to-rose-100 dark:from-gray-800 dark:to-gray-700 rounded-2xl p-8 md:p-12 text-center"
+          className="bg-gradient-to-r from-[#f5f5f5] to-[#e8e8e8] rounded-2xl p-8 md:p-12 text-center border border-[#d4af37]"
           initial={{ opacity: 0, scale: 0.95 }}
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.6, delay: 0.3 }}
           viewport={{ once: true }}
         >
-          <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-3">
+          <h3 className="text-2xl font-bold text-[#3a3a3a] dark:text-white mb-3">
             💝 Terima Kasih Atas Dukungan Anda
           </h3>
-          <p className="text-gray-700 dark:text-gray-300 mb-6 max-w-2xl mx-auto">
+          <p className="text-[#666666] dark:text-[#b0b0b0] mb-6 max-w-2xl mx-auto">
             Terima kasih telah menjadi bagian dari perjalanan cinta kami. Kehadiran dan dukungan Anda berarti lebih dari segalanya.
           </p>
           <Button size="lg">

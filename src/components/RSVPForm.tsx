@@ -91,11 +91,11 @@ export default function RSVPForm() {
   };
 
   const inputClasses =
-    'w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-amber-500 transition-all duration-300';
-  const labelClasses = 'block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2';
+    'w-full px-4 py-3 rounded-lg border border-[#e0e0e0] dark:border-[#555555] bg-white dark:bg-[#3a3a3a] text-[#3a3a3a] dark:text-white focus:outline-none focus:ring-2 focus:ring-[#d4af37] transition-all duration-300';
+  const labelClasses = 'block text-sm font-semibold text-[#3a3a3a] dark:text-[#e0e0e0] mb-2';
 
   return (
-    <section id="rsvp" className="py-20 bg-gradient-to-br from-gray-50 to-white dark:from-gray-900 dark:to-gray-800">
+    <section id="rsvp" className="py-20 bg-gradient-to-br from-[#f5f5f5] to-white">
       <Container>
         <motion.div
           className="text-center mb-16"
@@ -104,11 +104,11 @@ export default function RSVPForm() {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-gray-900 dark:text-white">
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-[#3a3a3a]">
             RSVP & Wishes
           </h2>
-          <div className="w-16 h-1 bg-gradient-to-r from-amber-500 to-rose-500 mx-auto mb-4" />
-          <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+          <div className="w-16 h-1 bg-gradient-to-r from-[#d4af37] to-[#c9a961] mx-auto mb-4" />
+          <p className="text-lg text-[#666666] dark:text-[#b0b0b0] max-w-2xl mx-auto">
             Confirm your attendance and share your wishes with us
           </p>
         </motion.div>
@@ -116,16 +116,16 @@ export default function RSVPForm() {
         <div className="grid md:grid-cols-2 gap-8">
           {/* RSVP Form - Left Side */}
           <motion.div
-            className="bg-white dark:bg-gray-900 rounded-2xl shadow-lg p-8 md:p-10 border border-gray-200 dark:border-gray-700"
+            className="bg-white dark:bg-[#3a3a3a] rounded-2xl shadow-lg p-8 md:p-10 border border-[#e0e0e0] dark:border-[#555555]"
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-3 text-center">
+            <h3 className="text-2xl font-bold text-[#3a3a3a] dark:text-white mb-3 text-center">
               RSVP
             </h3>
-            <p className="text-center text-gray-600 dark:text-gray-400 mb-6 text-sm">
+            <p className="text-center text-[#666666] dark:text-[#b0b0b0] mb-6 text-sm">
               Please kindly help us prepare everything better by confirming your attendance to our wedding event with the following RSVP form:
             </p>
 
@@ -248,16 +248,16 @@ export default function RSVPForm() {
 
           {/* Wishes Form - Right Side */}
           <motion.div
-            className="bg-white dark:bg-gray-900 rounded-2xl shadow-lg p-8 md:p-10 border border-gray-200 dark:border-gray-700"
+            className="bg-white dark:bg-[#3a3a3a] rounded-2xl shadow-lg p-8 md:p-10 border border-[#e0e0e0] dark:border-[#555555]"
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
             viewport={{ once: true }}
           >
-            <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-3 text-center">
+            <h3 className="text-2xl font-bold text-[#3a3a3a] dark:text-white mb-3 text-center">
               Wishes
             </h3>
-            <p className="text-center text-gray-600 dark:text-gray-400 mb-6 text-sm">
+            <p className="text-center text-[#666666] dark:text-[#b0b0b0] mb-6 text-sm">
               Leave Us A Note
               <br />
               <span className="text-xs">write your special wishes we love to hear from all of you</span>

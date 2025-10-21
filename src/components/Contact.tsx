@@ -55,12 +55,12 @@ export default function Contact() {
   };
 
   const inputClasses =
-    'w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-rose-500 transition-all duration-300';
+    'w-full px-4 py-3 rounded-lg border border-[#e0e0e0] dark:border-[#555555] bg-white dark:bg-[#3a3a3a] text-[#3a3a3a] dark:text-white focus:outline-none focus:ring-2 focus:ring-[#d4af37] transition-all duration-300';
 
-  const labelClasses = 'block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2';
+  const labelClasses = 'block text-sm font-semibold text-[#3a3a3a] dark:text-[#e0e0e0] mb-2';
 
   return (
-    <section id="contact" className="py-20 bg-white dark:bg-gray-900">
+    <section id="contact" className="py-20 bg-white dark:bg-[#2a2a2a]">
       <Container>
         <motion.div
           className="text-center mb-12"
@@ -69,11 +69,11 @@ export default function Contact() {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-gray-900 dark:text-white">
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-[#3a3a3a] dark:text-white">
             Get in Touch
           </h2>
-          <div className="w-16 h-1 bg-gradient-to-r from-rose-500 to-amber-500 mx-auto mb-4" />
-          <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+          <div className="w-16 h-1 bg-gradient-to-r from-[#d4af37] to-[#c9a961] mx-auto mb-4" />
+          <p className="text-lg text-[#666666] dark:text-[#b0b0b0] max-w-2xl mx-auto">
             Have questions or special requests? We&apos;d love to hear from you!
           </p>
         </motion.div>
@@ -88,10 +88,10 @@ export default function Contact() {
             viewport={{ once: true }}
           >
             <div>
-              <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+              <h3 className="text-2xl font-bold text-[#3a3a3a] dark:text-white mb-4">
                 Contact Information
               </h3>
-              <p className="text-gray-600 dark:text-gray-400 leading-relaxed mb-6">
+              <p className="text-[#666666] dark:text-[#b0b0b0] leading-relaxed mb-6">
                 We&apos;d love to connect with you! Reach out through any of the methods below or fill out the contact form.
               </p>
             </div>
@@ -102,9 +102,9 @@ export default function Contact() {
               whileHover={{ x: 10 }}
               transition={{ type: 'spring', stiffness: 300 }}
             >
-              <div className="flex-shrink-0 w-12 h-12 rounded-full bg-rose-100 dark:bg-rose-900/30 flex items-center justify-center">
+              <div className="flex-shrink-0 w-12 h-12 rounded-full bg-[#f5f5f5] dark:bg-[#3a3a3a] flex items-center justify-center">
                 <svg
-                  className="w-6 h-6 text-rose-600 dark:text-rose-400"
+                  className="w-6 h-6 text-[#d4af37]"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -118,10 +118,10 @@ export default function Contact() {
                 </svg>
               </div>
               <div>
-                <h4 className="font-semibold text-gray-900 dark:text-white mb-1">Email</h4>
+                <h4 className="font-semibold text-[#3a3a3a] dark:text-white mb-1">Email</h4>
                 <a
                   href="mailto:hello@weddingexample.com"
-                  className="text-gray-600 dark:text-gray-400 hover:text-rose-600 dark:hover:text-rose-400 transition-colors"
+                  className="text-[#666666] dark:text-[#b0b0b0] hover:text-[#d4af37] dark:hover:text-[#d4af37] transition-colors"
                 >
                   hello@weddingexample.com
                 </a>
@@ -134,9 +134,9 @@ export default function Contact() {
               whileHover={{ x: 10 }}
               transition={{ type: 'spring', stiffness: 300 }}
             >
-              <div className="flex-shrink-0 w-12 h-12 rounded-full bg-amber-100 dark:bg-amber-900/30 flex items-center justify-center">
+              <div className="flex-shrink-0 w-12 h-12 rounded-full bg-[#f5f5f5] dark:bg-[#3a3a3a] flex items-center justify-center">
                 <svg
-                  className="w-6 h-6 text-amber-600 dark:text-amber-400"
+                  className="w-6 h-6 text-[#d4af37]"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -150,10 +150,10 @@ export default function Contact() {
                 </svg>
               </div>
               <div>
-                <h4 className="font-semibold text-gray-900 dark:text-white mb-1">Phone</h4>
+                <h4 className="font-semibold text-[#3a3a3a] dark:text-white mb-1">Phone</h4>
                 <a
                   href="tel:+15551234567"
-                  className="text-gray-600 dark:text-gray-400 hover:text-amber-600 dark:hover:text-amber-400 transition-colors"
+                  className="text-[#666666] dark:text-[#b0b0b0] hover:text-[#d4af37] dark:hover:text-[#d4af37] transition-colors"
                 >
                   +1 (555) 123-4567
                 </a>
@@ -166,9 +166,9 @@ export default function Contact() {
               whileHover={{ x: 10 }}
               transition={{ type: 'spring', stiffness: 300 }}
             >
-              <div className="flex-shrink-0 w-12 h-12 rounded-full bg-pink-100 dark:bg-pink-900/30 flex items-center justify-center">
+              <div className="flex-shrink-0 w-12 h-12 rounded-full bg-[#f5f5f5] dark:bg-[#3a3a3a] flex items-center justify-center">
                 <svg
-                  className="w-6 h-6 text-pink-600 dark:text-pink-400"
+                  className="w-6 h-6 text-[#d4af37]"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -188,8 +188,8 @@ export default function Contact() {
                 </svg>
               </div>
               <div>
-                <h4 className="font-semibold text-gray-900 dark:text-white mb-1">Location</h4>
-                <p className="text-gray-600 dark:text-gray-400">
+                <h4 className="font-semibold text-[#3a3a3a] dark:text-white mb-1">Location</h4>
+                <p className="text-[#666666] dark:text-[#b0b0b0]">
                   Romance City, ST 12345<br />
                   United States
                 </p>
@@ -198,19 +198,19 @@ export default function Contact() {
 
             {/* Social Links */}
             <motion.div
-              className="pt-8 border-t border-gray-200 dark:border-gray-700"
+              className="pt-8 border-t border-[#e0e0e0] dark:border-[#555555]"
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               transition={{ duration: 0.6, delay: 0.3 }}
               viewport={{ once: true }}
             >
-              <h4 className="font-semibold text-gray-900 dark:text-white mb-4">Follow Us</h4>
+              <h4 className="font-semibold text-[#3a3a3a] dark:text-white mb-4">Follow Us</h4>
               <div className="flex gap-4">
                 {['instagram', 'facebook', 'twitter'].map((social) => (
                   <motion.a
                     key={social}
                     href="#"
-                    className="w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-800 flex items-center justify-center text-gray-600 dark:text-gray-400 hover:bg-rose-500 hover:text-white transition-colors"
+                    className="w-10 h-10 rounded-full bg-[#f5f5f5] dark:bg-[#3a3a3a] flex items-center justify-center text-[#3a3a3a] dark:text-white hover:bg-[#d4af37] hover:text-white transition-colors"
                     whileHover={{ scale: 1.1, rotate: 5 }}
                     whileTap={{ scale: 0.95 }}
                   >
@@ -225,7 +225,7 @@ export default function Contact() {
 
           {/* Contact Form */}
           <motion.div
-            className="bg-gray-50 dark:bg-gray-800 rounded-2xl p-8 md:p-10"
+            className="bg-[#f5f5f5] dark:bg-[#3a3a3a] rounded-2xl p-8 md:p-10"
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
