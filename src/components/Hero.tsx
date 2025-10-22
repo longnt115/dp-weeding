@@ -1,9 +1,14 @@
 "use client";
+export const dynamic = "force-dynamic";
 
 import { motion } from "framer-motion";
+import { useSearchParams } from "next/navigation";
 import Container from "./common/Container";
 
 export default function Hero() {
+  const searchParams = useSearchParams();
+  const guest = searchParams.get("guest");
+
   return (
     <section
       id="home"
@@ -30,7 +35,6 @@ export default function Hero() {
           transition={{ duration: 0.8 }}
         >
           <div className="aspect-video bg-linear-to-br from-wedding-gold via-[#c9a961] to-[#8b7d3f] flex items-center justify-center text-9xl relative">
-            📷
             {/* Overlay */}
             <div className="absolute inset-0 bg-black/40 flex items-end justify-center p-8">
               <motion.div
@@ -39,9 +43,21 @@ export default function Hero() {
                 transition={{ delay: 0.5, duration: 0.6 }}
                 className="text-white text-center"
               >
-                <h2 className="text-2xl md:text-3xl font-light">
-                  Thursday, March 11th, 2021
-                </h2>
+                {guest && (
+                  <div className="text-2xl md:text-3xl font-light">
+                    <div className="uppercase pb-6 barlow-thin">
+                      {" "}
+                      Thư mời tiệc cưới{" "}
+                    </div>
+                    <h2 className="border-solid border-t-2 py-7 barlow-thin">
+                      {" "}
+                      Trân Trọng Kính Mời:{" "}
+                    </h2>
+                    <div className="alex-brush-regular border-dotted border-b-1 text-[2rem] md:text-5xl">
+                      {guest}
+                    </div>
+                  </div>
+                )}
               </motion.div>
             </div>
           </div>

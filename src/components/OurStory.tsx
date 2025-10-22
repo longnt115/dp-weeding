@@ -127,7 +127,7 @@ export default function OurStory() {
         <div className="grid grid-cols-1 md:grid-cols-5 md:gap-6 items-center max-w-7xl mx-auto">
           {/* Left Image */}
           <motion.div
-            className="relative h-64 md:h-80 rounded-3xl overflow-hidden shadow-2xl transition-transform duration-300 hover:scale-[1.02] col-start-1 row-start-1"
+            className="relative h-64 md:h-full rounded-3xl overflow-hidden shadow-2xl transition-transform duration-300 hover:scale-[1.02] col-start-1 row-start-1"
             whileHover={{ scale: 1.02 }}
             transition={{ duration: 0.3 }}
           >
@@ -158,9 +158,31 @@ export default function OurStory() {
 
             {/* Venue Details */}
 
-            <h3 className="text-xl font-semibold text-gray-900 mb-2">
-              December 27th, 2025
-            </h3>
+            <div className="text-gray-900 mb-2">
+              <h3 className="text-2xl mb-5 mt-9 barlow-regular">
+                LỄ THÀNH HÔN
+              </h3>
+              <p className="text-xl barlow-regular">
+                Vào lúc {" "}
+                <span className="font-semibold">
+                  24h00 <span className="px-1"> | </span> Thứ bảy
+                </span>
+              </p>
+            </div>
+            <div className="text-gray-900 my-10 mr-[1rem] sm:mr-[1.25rem] lg:mr-[3.25rem]">
+              <span className="py-[0.5rem] mr-7 lg:pr-10 text-lg sm:text-xl lg:text-3xl barlow-bold">
+                Tháng 12
+              </span>
+              <span
+                className="py-[0.5rem] px-7 lg:px-10 text-3xl sm:text-4xl lg:text-5xl alex-brush-regular border-solid border-x-3 border-gray-900"
+                style={{ fontWeight: "bold" }}
+              >
+                27
+              </span>
+              <span className="py-[0.5rem] pl-7 lg:pl-10 text-xl lg:text-3xl barlow-bold">
+                2025
+              </span>
+            </div>
             <h4 className="font-semibold text-gray-900 mb-2">
               Masjid Raya Baiturrahman, Banda Aceh, Indonesia
             </h4>
@@ -182,7 +204,7 @@ export default function OurStory() {
           </motion.div>
           {/* Right Image */}
           <motion.div
-            className="relative h-64 md:h-80 rounded-3xl overflow-hidden shadow-2xl transition-transform duration-300 hover:scale-[1.02] md:col-start-5 row-start-2 md:row-start-1"
+            className="relative h-64 md:h-full rounded-3xl overflow-hidden shadow-2xl transition-transform duration-300 hover:scale-[1.02] md:col-start-5 row-start-2 md:row-start-1"
             whileHover={{ scale: 1.02 }}
             transition={{ duration: 0.3 }}
           >

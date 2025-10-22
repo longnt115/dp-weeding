@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Our Wedding - Celebrate Our Special Day",
+  title: "Thư Mời Dự Tiệc Cưới",
   description:
     "Join us as we celebrate our love and commitment. Explore our wedding details, gallery, and RSVP.",
 };

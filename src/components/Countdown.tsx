@@ -74,12 +74,12 @@ export default function Countdown() {
     <div className={`flex flex-col items-center ${className}`}>
       <div className="relative">
         <div className="w-20 flex items-center justify-center">
-          <span className="text-4xl md:text-6xl font-bold text-white">
+          <span className="text-3xl md:text-4xl md:text-6xl font-bold text-white">
             {String(value).padStart(2, "0")}
           </span>
         </div>
       </div>
-      <p className="mt-3 text-white font-semibold text-2xl md:text-3xl alex-brush-regular">
+      <p className="mt-3 text-white font-semibold text-xl md:text-3xl alex-brush-regular">
         {label}
       </p>
     </div>
@@ -89,7 +89,7 @@ export default function Countdown() {
     <section className="md:max-width-[768px] px-4 sm:px-6 py-16 bg-linear-to-r from-wedding-light to-[#e8e8e8]">
       <div className="rounded-3xl mx-auto lg:px-8 max-w-6xl bg-gray-600">
         <motion.div
-          className="text-center mb-12"
+          className="text-center mb-7 sm:mb-12"
           initial={{ opacity: 0, y: -30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
@@ -111,17 +111,17 @@ export default function Countdown() {
           viewport={{ once: true }}
         >
           <CountdownCard
-            className="mr-5 sm:mr-7 md:mr-10"
+            className="mr-2 sm:mr-7 md:mr-10"
             value={timeLeft.days}
             label="Days"
           />
           <CountdownCard
-            className="mr-5 sm:mr-7 md:mr-10"
+            className="mr-2 sm:mr-7 md:mr-10"
             value={timeLeft.hours}
             label="Hours"
           />
           <CountdownCard
-            className="mr-5 sm:mr-7 md:mr-10"
+            className="mr-2 sm:mr-7 md:mr-10"
             value={timeLeft.minutes}
             label="Minutes"
           />
