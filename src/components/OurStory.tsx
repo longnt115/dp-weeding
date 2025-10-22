@@ -1,6 +1,6 @@
-'use client';
-import { motion } from 'framer-motion';
-import Container from './common/Container';
+"use client";
+import { motion } from "framer-motion";
+import Container from "./common/Container";
 
 export default function OurStory() {
   const containerVariants = {
@@ -23,7 +23,7 @@ export default function OurStory() {
   };
 
   return (
-    <section id="story" className="py-20 bg-white dark:bg-gray-900">
+    <section id="story" className="py-20 bg-white">
       <Container>
         <motion.div
           className="text-center mb-16"
@@ -32,11 +32,11 @@ export default function OurStory() {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-gray-900 dark:text-white">
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-gray-900">
             Our Love Story
           </h2>
           <div className="w-16 h-1 bg-gradient-to-r from-amber-500 to-rose-500 mx-auto mb-4" />
-          <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             A journey of love, laughter, and beautiful moments that led us here
           </p>
         </motion.div>
@@ -56,7 +56,7 @@ export default function OurStory() {
               whileHover={{ y: -10 }}
               className="relative group overflow-hidden rounded-2xl shadow-lg"
             >
-              <div className="aspect-video bg-gradient-to-br from-amber-200 to-rose-200 dark:from-gray-700 dark:to-gray-600 flex items-center justify-center text-8xl relative">
+              <div className="aspect-video bg-gradient-to-br from-amber-200 to-rose-200 flex items-center justify-center text-8xl relative">
                 👰💍
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               </div>
@@ -77,41 +77,41 @@ export default function OurStory() {
             <motion.div
               className="text-center"
               whileHover={{ scale: 1.05 }}
-              transition={{ type: 'spring', stiffness: 300 }}
+              transition={{ type: "spring", stiffness: 300 }}
             >
               <div className="w-32 h-32 md:w-40 md:h-40 mx-auto mb-6 rounded-2xl overflow-hidden shadow-lg">
-                <div className="w-full h-full bg-gradient-to-br from-amber-200 to-yellow-200 dark:from-gray-600 dark:to-gray-500 flex items-center justify-center text-7xl">
+                <div className="w-full h-full bg-gradient-to-br from-amber-200 to-yellow-200 flex items-center justify-center text-7xl">
                   🤵
                 </div>
               </div>
-              <h3 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-2">
+              <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2">
                 Groom
               </h3>
-              <p className="text-gray-600 dark:text-gray-400">Nama lengkap mempelai</p>
+              <p className="text-gray-600">lengkap mempelai</p>
             </motion.div>
 
             {/* Bride */}
             <motion.div
               className="text-center"
               whileHover={{ scale: 1.05 }}
-              transition={{ type: 'spring', stiffness: 300 }}
+              transition={{ type: "spring", stiffness: 300 }}
             >
               <div className="w-32 h-32 md:w-40 md:h-40 mx-auto mb-6 rounded-2xl overflow-hidden shadow-lg">
-                <div className="w-full h-full bg-gradient-to-br from-rose-200 to-pink-200 dark:from-gray-600 dark:to-gray-500 flex items-center justify-center text-7xl">
+                <div className="w-full h-full bg-gradient-to-br from-rose-200 to-pink-200 flex items-center justify-center text-7xl">
                   👰
                 </div>
               </div>
-              <h3 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-2">
+              <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2">
                 Bride
               </h3>
-              <p className="text-gray-600 dark:text-gray-400">Nama lengkap mempelai</p>
+              <p className="text-gray-600">lengkap mempelai</p>
             </motion.div>
           </div>
         </motion.div>
 
         {/* Events Cards Section */}
         <motion.div
-          className="mt-12 pt-12 border-t border-gray-200 dark:border-gray-700"
+          className="mt-12 pt-12 border-t border-gray-200"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.3 }}
@@ -120,48 +120,54 @@ export default function OurStory() {
           <div className="grid md:grid-cols-2 gap-6">
             {/* Akad Nikah Card */}
             <motion.div
-              className="bg-gradient-to-br from-gray-100 to-gray-50 dark:from-gray-800 dark:to-gray-700 rounded-2xl p-8 text-center shadow-lg hover:shadow-xl transition-shadow"
+              className="bg-gradient-to-br from-gray-100 to-gray-50 rounded-2xl p-8 text-center shadow-lg hover:shadow-xl transition-shadow"
               whileHover={{ y: -5 }}
             >
-              <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">
                 Akad Nikah
               </h3>
               <div className="space-y-3">
-                <p className="text-gray-600 dark:text-gray-400">
-                  <span className="block text-sm font-semibold text-gray-500 dark:text-gray-500 mb-1">CEREMONY</span>
-                  <span className="text-lg font-semibold text-gray-900 dark:text-white">Thursday, March 11th, 2021</span>
+                <p className="text-gray-600">
+                  <span className="block text-sm font-semibold text-gray-500 mb-1">
+                    CEREMONY
+                  </span>
+                  <span className="text-lg font-semibold text-gray-900">
+                    March 11th, 2021
+                  </span>
                 </p>
-                <p className="text-amber-600 dark:text-amber-400 text-xl font-bold">
-                  07.00 WIB
-                </p>
+                <p className="text-amber-600 text-xl font-bold">07.00 WIB</p>
               </div>
-              <div className="mt-6 pt-6 border-t border-gray-300 dark:border-gray-600">
-                <p className="text-sm text-gray-600 dark:text-gray-400">
-                  Akad nikah akan dilaksanakan di Mesjid Baitus Salam dengan dihadiri oleh keluarga dan sahabat terdekat.
+              <div className="mt-6 pt-6 border-t border-gray-300">
+                <p className="text-sm text-gray-600">
+                  Akad nikah akan dilaksanakan di Mesjid Baitus Salam dengan
+                  dihadiri oleh keluarga dan sahabat terdekat.
                 </p>
               </div>
             </motion.div>
 
             {/* Resepsi Nikah Card */}
             <motion.div
-              className="bg-gradient-to-br from-gray-100 to-gray-50 dark:from-gray-800 dark:to-gray-700 rounded-2xl p-8 text-center shadow-lg hover:shadow-xl transition-shadow"
+              className="bg-gradient-to-br from-gray-100 to-gray-50 rounded-2xl p-8 text-center shadow-lg hover:shadow-xl transition-shadow"
               whileHover={{ y: -5 }}
             >
-              <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">
                 Resepsi Nikah
               </h3>
               <div className="space-y-3">
-                <p className="text-gray-600 dark:text-gray-400">
-                  <span className="block text-sm font-semibold text-gray-500 dark:text-gray-500 mb-1">RECEPTION</span>
-                  <span className="text-lg font-semibold text-gray-900 dark:text-white">Thursday, March 11th, 2021</span>
+                <p className="text-gray-600">
+                  <span className="block text-sm font-semibold text-gray-500 mb-1">
+                    RECEPTION
+                  </span>
+                  <span className="text-lg font-semibold text-gray-900">
+                    March 11th, 2021
+                  </span>
                 </p>
-                <p className="text-amber-600 dark:text-amber-400 text-xl font-bold">
-                  18.00 WIB
-                </p>
+                <p className="text-amber-600 text-xl font-bold">18.00 WIB</p>
               </div>
-              <div className="mt-6 pt-6 border-t border-gray-300 dark:border-gray-600">
-                <p className="text-sm text-gray-600 dark:text-gray-400">
-                  Acara resepsi akan diselenggarakan dengan suasana yang meriah, penuh dengan kebersamaan dan kebahagiaan.
+              <div className="mt-6 pt-6 border-t border-gray-300">
+                <p className="text-sm text-gray-600">
+                  Acara resepsi akan diselenggarakan dengan suasana yang meriah,
+                  penuh dengan kebersamaan dan kebahagiaan.
                 </p>
               </div>
             </motion.div>

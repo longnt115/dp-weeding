@@ -92,7 +92,7 @@ export default function Countdown() {
           </span>
         </div>
       </div>
-      <p className="mt-3 text-white dark:text-[#b0b0b0] font-semibold uppercase text-sm md:text-base">
+      <p className="mt-3 text-white font-semibold uppercase text-sm md:text-base">
         {label}
       </p>
     </motion.div>
@@ -108,10 +108,10 @@ export default function Countdown() {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-white dark:text-white mb-2 pt-6">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-2 pt-6">
             Counting Days
           </h2>
-          <p className="text-[#b0b0b0] dark:text-[#b0b0b0]">
+          <p className="text-[#b0b0b0]">
             We can&apos;t wait to celebrate with you!
           </p>
         </motion.div>

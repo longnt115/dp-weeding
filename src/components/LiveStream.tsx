@@ -48,7 +48,7 @@ export default function LiveStream() {
   };
 
   return (
-    <section className="py-16 bg-gradient-to-r from-[#f5f5f5] to-white dark:from-[#2a2a2a] dark:to-[#3a3a3a]">
+    <section className="py-16 bg-gradient-to-r from-[#f5f5f5] to-white
       <Container>
         <motion.div
           className="text-center mb-12"
@@ -57,10 +57,10 @@ export default function LiveStream() {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-[#3a3a3a] dark:text-white mb-2">
+          <h2 className="text-3xl md:text-4xl font-bold text-[#3a3a3a] mb-2">
             Follow Our Live Stream
           </h2>
-          <p className="text-[#666666] dark:text-[#b0b0b0]">
+          <p className="text-[#666666]
             Bergabunglah dengan kami secara online di media sosial favorit Anda
           </p>
         </motion.div>
@@ -112,7 +112,7 @@ export default function LiveStream() {
           transition={{ duration: 0.6, delay: 0.4 }}
           viewport={{ once: true }}
         >
-          <p className="text-[#666666] dark:text-[#b0b0b0] mb-4">
+          <p className="text-[#666666] mb-4">
             🔴 Acara akan disiarkan langsung pada hari H. Jangan sampai ketinggalan!
           </p>
         </motion.div>

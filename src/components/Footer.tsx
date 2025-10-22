@@ -20,7 +20,7 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="bg-[#3a3a3a] dark:bg-[#1a1a1a] text-white mt-20">
+    <footer className="bg-[#3a3a3a] text-white mt-20">
       <Container className="py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           {/* Brand */}

@@ -1,16 +1,18 @@
-'use client';
+"use client";
 
-import { ContactFormSchema, ContactFormType } from '@/lib/formSchema';
-import { zodResolver } from '@hookform/resolvers/zod';
-import { motion } from 'framer-motion';
-import { useState } from 'react';
-import { useForm } from 'react-hook-form';
-import Button from './common/Button';
-import Container from './common/Container';
+import { ContactFormSchema, ContactFormType } from "@/lib/formSchema";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { motion } from "framer-motion";
+import { useState } from "react";
+import { useForm } from "react-hook-form";
+import Button from "./common/Button";
+import Container from "./common/Container";
 
 export default function Contact() {
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+  const [submitStatus, setSubmitStatus] = useState<
+    "idle" | "success" | "error"
+  >("idle");
 
   const {
     register,
@@ -20,47 +22,47 @@ export default function Contact() {
   } = useForm<ContactFormType>({
     resolver: zodResolver(ContactFormSchema),
     defaultValues: {
-      name: '',
-      email: '',
-      subject: '',
-      message: '',
+      name: "",
+      email: "",
+      subject: "",
+      message: "",
     },
   });
 
   const onSubmit = async (data: ContactFormType) => {
     setIsSubmitting(true);
     try {
-      const response = await fetch('/api/contact', {
-        method: 'POST',
+      const response = await fetch("/api/contact", {
+        method: "POST",
         headers: {
-          'Content-Type': 'application/json',
+          "Content-Type": "application/json",
         },
         body: JSON.stringify(data),
       });
 
       if (!response.ok) {
-        throw new Error('Failed to send message');
+        throw new Error("Failed to send message");
       }
 
-      setSubmitStatus('success');
+      setSubmitStatus("success");
       reset();
-      setTimeout(() => setSubmitStatus('idle'), 5000);
+      setTimeout(() => setSubmitStatus("idle"), 5000);
     } catch (error) {
-      console.error('Contact submission error:', error);
-      setSubmitStatus('error');
-      setTimeout(() => setSubmitStatus('idle'), 5000);
+      console.error("Contact submission error:", error);
+      setSubmitStatus("error");
+      setTimeout(() => setSubmitStatus("idle"), 5000);
     } finally {
       setIsSubmitting(false);
     }
   };
 
   const inputClasses =
-    'w-full px-4 py-3 rounded-lg border border-[#e0e0e0] dark:border-[#555555] bg-white dark:bg-[#3a3a3a] text-[#3a3a3a] dark:text-white focus:outline-none focus:ring-2 focus:ring-[#d4af37] transition-all duration-300';
+    "w-full px-4 py-3 rounded-lg border border-[#e0e0e0] bg-white text-[#3a3a3a] focus:outline-none focus:ring-2 focus:ring-[#d4af37] transition-all duration-300";
 
-  const labelClasses = 'block text-sm font-semibold text-[#3a3a3a] dark:text-[#e0e0e0] mb-2';
+  const labelClasses = "block text-sm font-semibold text-[#3a3a3a] mb-2";
 
   return (
-    <section id="contact" className="py-20 bg-white dark:bg-[#2a2a2a]">
+    <section id="contact" className="py-20 bg-white">
       <Container>
         <motion.div
           className="text-center mb-12"
@@ -69,11 +71,11 @@ export default function Contact() {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-[#3a3a3a] dark:text-white">
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-[#3a3a3a]">
             Get in Touch
           </h2>
           <div className="w-16 h-1 bg-gradient-to-r from-[#d4af37] to-[#c9a961] mx-auto mb-4" />
-          <p className="text-lg text-[#666666] dark:text-[#b0b0b0] max-w-2xl mx-auto">
+          <p className="text-lg text-[#666666] max-w-2xl mx-auto">
             Have questions or special requests? We&apos;d love to hear from you!
           </p>
         </motion.div>
@@ -88,11 +90,12 @@ export default function Contact() {
             viewport={{ once: true }}
           >
             <div>
-              <h3 className="text-2xl font-bold text-[#3a3a3a] dark:text-white mb-4">
+              <h3 className="text-2xl font-bold text-[#3a3a3a] mb-4">
                 Contact Information
               </h3>
-              <p className="text-[#666666] dark:text-[#b0b0b0] leading-relaxed mb-6">
-                We&apos;d love to connect with you! Reach out through any of the methods below or fill out the contact form.
+              <p className="text-[#666666] leading-relaxed mb-6">
+                We&apos;d love to connect with you! Reach out through any of the
+                methods below or fill out the contact form.
               </p>
             </div>
 
@@ -100,9 +103,9 @@ export default function Contact() {
             <motion.div
               className="flex gap-4"
               whileHover={{ x: 10 }}
-              transition={{ type: 'spring', stiffness: 300 }}
+              transition={{ type: "spring", stiffness: 300 }}
             >
-              <div className="flex-shrink-0 w-12 h-12 rounded-full bg-[#f5f5f5] dark:bg-[#3a3a3a] flex items-center justify-center">
+              <div className="flex-shrink-0 w-12 h-12 rounded-full bg-[#f5f5f5] flex items-center justify-center">
                 <svg
                   className="w-6 h-6 text-[#d4af37]"
                   fill="none"
@@ -118,10 +121,10 @@ export default function Contact() {
                 </svg>
               </div>
               <div>
-                <h4 className="font-semibold text-[#3a3a3a] dark:text-white mb-1">Email</h4>
+                <h4 className="font-semibold text-[#3a3a3a] mb-1">Email</h4>
                 <a
                   href="mailto:hello@weddingexample.com"
-                  className="text-[#666666] dark:text-[#b0b0b0] hover:text-[#d4af37] dark:hover:text-[#d4af37] transition-colors"
+                  className="text-[#666666] hover:text-[#d4af37] transition-colors"
                 >
                   hello@weddingexample.com
                 </a>
@@ -132,9 +135,9 @@ export default function Contact() {
             <motion.div
               className="flex gap-4"
               whileHover={{ x: 10 }}
-              transition={{ type: 'spring', stiffness: 300 }}
+              transition={{ type: "spring", stiffness: 300 }}
             >
-              <div className="flex-shrink-0 w-12 h-12 rounded-full bg-[#f5f5f5] dark:bg-[#3a3a3a] flex items-center justify-center">
+              <div className="flex-shrink-0 w-12 h-12 rounded-full bg-[#f5f5f5] flex items-center justify-center">
                 <svg
                   className="w-6 h-6 text-[#d4af37]"
                   fill="none"
@@ -150,10 +153,10 @@ export default function Contact() {
                 </svg>
               </div>
               <div>
-                <h4 className="font-semibold text-[#3a3a3a] dark:text-white mb-1">Phone</h4>
+                <h4 className="font-semibold text-[#3a3a3a] mb-1">Phone</h4>
                 <a
                   href="tel:+15551234567"
-                  className="text-[#666666] dark:text-[#b0b0b0] hover:text-[#d4af37] dark:hover:text-[#d4af37] transition-colors"
+                  className="text-[#666666] hover:text-[#d4af37] transition-colors"
                 >
                   +1 (555) 123-4567
                 </a>
@@ -164,9 +167,9 @@ export default function Contact() {
             <motion.div
               className="flex gap-4"
               whileHover={{ x: 10 }}
-              transition={{ type: 'spring', stiffness: 300 }}
+              transition={{ type: "spring", stiffness: 300 }}
             >
-              <div className="flex-shrink-0 w-12 h-12 rounded-full bg-[#f5f5f5] dark:bg-[#3a3a3a] flex items-center justify-center">
+              <div className="flex-shrink-0 w-12 h-12 rounded-full bg-[#f5f5f5] flex items-center justify-center">
                 <svg
                   className="w-6 h-6 text-[#d4af37]"
                   fill="none"
@@ -188,9 +191,10 @@ export default function Contact() {
                 </svg>
               </div>
               <div>
-                <h4 className="font-semibold text-[#3a3a3a] dark:text-white mb-1">Location</h4>
-                <p className="text-[#666666] dark:text-[#b0b0b0]">
-                  Romance City, ST 12345<br />
+                <h4 className="font-semibold text-[#3a3a3a] mb-1">Location</h4>
+                <p className="text-[#666666]">
+                  Romance City, ST 12345
+                  <br />
                   United States
                 </p>
               </div>
@@ -198,19 +202,19 @@ export default function Contact() {
 
             {/* Social Links */}
             <motion.div
-              className="pt-8 border-t border-[#e0e0e0] dark:border-[#555555]"
+              className="pt-8 border-t border-[#e0e0e0]"
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               transition={{ duration: 0.6, delay: 0.3 }}
               viewport={{ once: true }}
             >
-              <h4 className="font-semibold text-[#3a3a3a] dark:text-white mb-4">Follow Us</h4>
+              <h4 className="font-semibold text-[#3a3a3a] mb-4">Follow Us</h4>
               <div className="flex gap-4">
-                {['instagram', 'facebook', 'twitter'].map((social) => (
+                {["instagram", "facebook", "twitter"].map((social) => (
                   <motion.a
                     key={social}
                     href="#"
-                    className="w-10 h-10 rounded-full bg-[#f5f5f5] dark:bg-[#3a3a3a] flex items-center justify-center text-[#3a3a3a] dark:text-white hover:bg-[#d4af37] hover:text-white transition-colors"
+                    className="w-10 h-10 rounded-full bg-[#f5f5f5] flex items-center justify-center text-[#3a3a3a] hover:bg-[#d4af37] hover:text-white transition-colors"
                     whileHover={{ scale: 1.1, rotate: 5 }}
                     whileTap={{ scale: 0.95 }}
                   >
@@ -225,31 +229,31 @@ export default function Contact() {
 
           {/* Contact Form */}
           <motion.div
-            className="bg-[#f5f5f5] dark:bg-[#3a3a3a] rounded-2xl p-8 md:p-10"
+            className="bg-[#f5f5f5] rounded-2xl p-8 md:p-10"
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            {submitStatus === 'success' && (
+            {submitStatus === "success" && (
               <motion.div
-                className="mb-6 p-4 bg-green-50 dark:bg-green-900/30 border border-green-200 dark:border-green-700 rounded-lg"
+                className="mb-6 p-4 bg-green-50 border border-green-200 rounded-lg"
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
               >
-                <p className="text-green-800 dark:text-green-200 font-semibold">
+                <p className="text-green-800 font-semibold">
                   ✓ Message sent successfully! We&apos;ll get back to you soon.
                 </p>
               </motion.div>
             )}
 
-            {submitStatus === 'error' && (
+            {submitStatus === "error" && (
               <motion.div
-                className="mb-6 p-4 bg-red-50 dark:bg-red-900/30 border border-red-200 dark:border-red-700 rounded-lg"
+                className="mb-6 p-4 bg-red-50 border border-red-200 rounded-lg"
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
               >
-                <p className="text-red-800 dark:text-red-200 font-semibold">
+                <p className="text-red-800 font-semibold">
                   ✗ Failed to send message. Please try again.
                 </p>
               </motion.div>
@@ -266,10 +270,10 @@ export default function Contact() {
                   type="text"
                   placeholder="Your name"
                   className={inputClasses}
-                  {...register('name')}
+                  {...register("name")}
                 />
                 {errors.name && (
-                  <p className="mt-1 text-sm text-red-500 dark:text-red-400">
+                  <p className="mt-1 text-sm text-red-500">
                     {errors.name.message}
                   </p>
                 )}
@@ -285,10 +289,10 @@ export default function Contact() {
                   type="email"
                   placeholder="your.email@example.com"
                   className={inputClasses}
-                  {...register('email')}
+                  {...register("email")}
                 />
                 {errors.email && (
-                  <p className="mt-1 text-sm text-red-500 dark:text-red-400">
+                  <p className="mt-1 text-sm text-red-500">
                     {errors.email.message}
                   </p>
                 )}
@@ -304,10 +308,10 @@ export default function Contact() {
                   type="text"
                   placeholder="What is this about?"
                   className={inputClasses}
-                  {...register('subject')}
+                  {...register("subject")}
                 />
                 {errors.subject && (
-                  <p className="mt-1 text-sm text-red-500 dark:text-red-400">
+                  <p className="mt-1 text-sm text-red-500">
                     {errors.subject.message}
                   </p>
                 )}
@@ -323,24 +327,27 @@ export default function Contact() {
                   placeholder="Your message here..."
                   rows={5}
                   className={`${inputClasses} resize-none`}
-                  {...register('message')}
+                  {...register("message")}
                 />
                 {errors.message && (
-                  <p className="mt-1 text-sm text-red-500 dark:text-red-400">
+                  <p className="mt-1 text-sm text-red-500">
                     {errors.message.message}
                   </p>
                 )}
               </div>
 
               {/* Submit Button */}
-              <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
+              <motion.div
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+              >
                 <Button
                   type="submit"
                   disabled={isSubmitting}
                   className="w-full"
                   variant="primary"
                 >
-                  {isSubmitting ? 'Sending...' : 'Send Message'}
+                  {isSubmitting ? "Sending..." : "Send Message"}
                 </Button>
               </motion.div>
             </form>

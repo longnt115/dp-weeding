@@ -14,7 +14,8 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Our Wedding - Celebrate Our Special Day",
-  description: "Join us as we celebrate our love and commitment. Explore our wedding details, gallery, and RSVP.",
+  description:
+    "Join us as we celebrate our love and commitment. Explore our wedding details, gallery, and RSVP.",
 };
 
 export default function RootLayout({
@@ -25,7 +26,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-white dark:bg-gray-950 text-gray-900 dark:text-gray-100`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-white text-gray-900`}
       >
         {children}
         {/* <Footer /> */}

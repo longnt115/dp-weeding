@@ -29,7 +29,7 @@ export default function Hero() {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8 }}
         >
-          <div className="aspect-video bg-gradient-to-br from-[#d4af37] via-[#c9a961] to-[#8b7d3f] dark:from-[#4a4a4a] dark:via-[#3a3a3a] dark:to-[#2a2a2a] flex items-center justify-center text-9xl relative">
+          <div className="aspect-video bg-gradient-to-br from-[#d4af37] via-[#c9a961] to-[#8b7d3f] flex items-center justify-center text-9xl relative">
             📷
             {/* Overlay */}
             <div className="absolute inset-0 bg-black/40 flex items-end justify-center p-8">
