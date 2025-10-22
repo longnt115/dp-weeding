@@ -7,7 +7,7 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="min-h-screen flex items-center justify-center bg-linear-to-br from-wedding-light to-[#e8e8e8] relative overflow-hidden"
+      className="min-h-screen flex items-center justify-center bg-linear-to-br from-[#f5f5f5] to-[#e8e8e8] relative overflow-hidden"
     >
       {/* Decorative background elements */}
       <motion.div

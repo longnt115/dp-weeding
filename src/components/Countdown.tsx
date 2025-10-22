@@ -74,7 +74,7 @@ export default function Countdown() {
     <div className={`flex flex-col items-center ${className}`}>
       <div className="relative">
         <div className="w-20 flex items-center justify-center">
-          <span className="text-3xl md:text-4xl font-bold text-white">
+          <span className="text-4xl md:text-6xl font-bold text-white">
             {String(value).padStart(2, "0")}
           </span>
         </div>
@@ -95,12 +95,12 @@ export default function Countdown() {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-2 pt-6">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-2 pt-6">
             Counting Days
           </h2>
-          <p className="text-[#b0b0b0]">
+          <h4 className="text-[#b0b0b0]">
             We can&apos;t wait to celebrate with you!
-          </p>
+          </h4>
         </motion.div>
 
         <motion.div

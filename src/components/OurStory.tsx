@@ -1,48 +1,31 @@
 "use client";
 import { motion } from "framer-motion";
-import Container from "./common/Container";
+import Image from "next/image";
 
 export default function OurStory() {
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.2,
-      },
-    },
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 50 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.6 },
-    },
-  };
-
   return (
-    <section id="story" className="py-20 bg-white">
-      <Container>
-        <motion.div
-          className="text-center mb-16"
-          initial={{ opacity: 0, y: -30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-        >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-gray-900">
-            Our Love Story
-          </h2>
-          <div className="w-16 h-1 bg-linear-to-r from-amber-500 to-rose-500 mx-auto mb-4" />
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            A journey of love, laughter, and beautiful moments that led us here
-          </p>
-        </motion.div>
+    <section
+      id="story"
+      className="py-20 from-[#f5f5f5] to-[#e8e8e8] mx-auto max-w-[95%]"
+    >
+      <motion.div
+        className="text-center mb-16"
+        initial={{ opacity: 0, y: -30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: true }}
+      >
+        <h2 className="text-4xl md:text-5xl font-bold mb-4 text-gray-900">
+          Our Love Story
+        </h2>
+        <div className="w-16 h-1 bg-linear-to-r from-amber-500 to-rose-500 mx-auto mb-4" />
+        <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          A journey of love, laughter, and beautiful moments that led us here
+        </p>
+      </motion.div>
 
-        {/* Story Cards Carousel */}
-        <motion.div
+      {/* Story Cards Carousel */}
+      {/* <motion.div
           className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12"
           variants={containerVariants}
           initial="hidden"
@@ -62,118 +45,156 @@ export default function OurStory() {
               </div>
             </motion.div>
           ))}
-        </motion.div>
+        </motion.div> */}
 
-        {/* Groom & Bride Profile Section */}
-        <motion.div
-          className="mb-12"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          viewport={{ once: true }}
-        >
-          <div className="grid grid-cols-2 gap-8 md:gap-12">
-            {/* Groom */}
-            <motion.div
-              className="text-center"
-              whileHover={{ scale: 1.05 }}
-              transition={{ type: "spring", stiffness: 300 }}
+      {/* Groom & Bride Profile Section */}
+      <motion.div
+        className="mb-12"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 0.6, delay: 0.2 }}
+        viewport={{ once: true }}
+      >
+        <div className="flex flex-row justify-center mb-8 gap-8 md:gap-16">
+          {/* Groom */}
+          <div className="text-center flex flex-col">
+            <div className="w-40 h-40 md:w-60 md:h-60 mx-auto mb-6 rounded-2xl overflow-hidden shadow-xl">
+              <Image
+                alt="groom-avt"
+                width={500}
+                height={500}
+                src="/assets/avatar/groom.jpg"
+              />
+            </div>
+            <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-2 alex-brush-regular">
+              Nguyễn Hải Đăng
+            </h2>
+            <a
+              href="https://www.instagram.com/haidannx/"
+              target="_blank"
+              className="self-center w-40 md:w-60 cursor-pointer text-wedding-light bg-wedding-dark p-2 rounded-lg mt-2"
             >
-              <div className="w-32 h-32 md:w-40 md:h-40 mx-auto mb-6 rounded-2xl overflow-hidden shadow-lg">
-                <div className="w-full h-full bg-linear-to-br from-amber-200 to-yellow-200 flex items-center justify-center text-7xl">
-                  🤵
-                </div>
-              </div>
-              <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2">
-                Groom
-              </h3>
-              <p className="text-gray-600">lengkap mempelai</p>
-            </motion.div>
-
-            {/* Bride */}
-            <motion.div
-              className="text-center"
-              whileHover={{ scale: 1.05 }}
-              transition={{ type: "spring", stiffness: 300 }}
-            >
-              <div className="w-32 h-32 md:w-40 md:h-40 mx-auto mb-6 rounded-2xl overflow-hidden shadow-lg">
-                <div className="w-full h-full bg-linear-to-br from-rose-200 to-pink-200 flex items-center justify-center text-7xl">
-                  👰
-                </div>
-              </div>
-              <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2">
-                Bride
-              </h3>
-              <p className="text-gray-600">lengkap mempelai</p>
-            </motion.div>
+              <Image
+                src="/assets/icon/instagram-color-svgrepo-com.svg"
+                alt="Instagram"
+                width={16}
+                height={16}
+                className="inline-block mr-2"
+              />
+              haidannx
+            </a>
           </div>
-        </motion.div>
 
-        {/* Events Cards Section */}
-        <motion.div
-          className="mt-12 pt-12 border-t border-gray-200"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.6, delay: 0.3 }}
-          viewport={{ once: true }}
-        >
-          <div className="grid md:grid-cols-2 gap-6">
-            {/* Akad Nikah Card */}
-            <motion.div
-              className="bg-linear-to-br from-gray-100 to-gray-50 rounded-2xl p-8 text-center shadow-lg hover:shadow-xl transition-shadow"
-              whileHover={{ y: -5 }}
+          {/* Bride */}
+          <div className="text-center flex flex-col">
+            <div className="w-40 md:w-60 mx-auto mb-6 rounded-2xl overflow-hidden shadow-lg">
+              <Image
+                alt="bride-avt"
+                width={500}
+                height={500}
+                src="/assets/avatar/bride.jpg"
+              />
+            </div>
+            <h3 className="text-3xl md:text-5xl font-bold text-gray-900 mb-2 alex-brush-regular">
+              Nguyễn Bích Phượng
+            </h3>
+            <a
+              href="https://www.instagram.com/naughtysheep/"
+              target="_blank"
+              className="self-center w-40 md:w-60 cursor-pointer text-wedding-light bg-wedding-dark p-2 rounded-lg mt-2"
             >
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                Akad Nikah
-              </h3>
-              <div className="space-y-3">
-                <p className="text-gray-600">
-                  <span className="block text-sm font-semibold text-gray-500 mb-1">
-                    CEREMONY
-                  </span>
-                  <span className="text-lg font-semibold text-gray-900">
-                    March 11th, 2021
-                  </span>
-                </p>
-                <p className="text-amber-600 text-xl font-bold">07.00 WIB</p>
-              </div>
-              <div className="mt-6 pt-6 border-t border-gray-300">
-                <p className="text-sm text-gray-600">
-                  Akad nikah akan dilaksanakan di Mesjid Baitus Salam dengan
-                  dihadiri oleh keluarga dan sahabat terdekat.
-                </p>
-              </div>
-            </motion.div>
-
-            {/* Resepsi Nikah Card */}
-            <motion.div
-              className="bg-linear-to-br from-gray-100 to-gray-50 rounded-2xl p-8 text-center shadow-lg hover:shadow-xl transition-shadow"
-              whileHover={{ y: -5 }}
-            >
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                Resepsi Nikah
-              </h3>
-              <div className="space-y-3">
-                <p className="text-gray-600">
-                  <span className="block text-sm font-semibold text-gray-500 mb-1">
-                    RECEPTION
-                  </span>
-                  <span className="text-lg font-semibold text-gray-900">
-                    March 11th, 2021
-                  </span>
-                </p>
-                <p className="text-amber-600 text-xl font-bold">18.00 WIB</p>
-              </div>
-              <div className="mt-6 pt-6 border-t border-gray-300">
-                <p className="text-sm text-gray-600">
-                  Acara resepsi akan diselenggarakan dengan suasana yang meriah,
-                  penuh dengan kebersamaan dan kebahagiaan.
-                </p>
-              </div>
-            </motion.div>
+              <Image
+                src="/assets/icon/instagram-color-svgrepo-com.svg"
+                alt="Instagram"
+                width={16}
+                height={16}
+                className="inline-block mr-2"
+              />
+              naughtysheep
+            </a>
           </div>
-        </motion.div>
-      </Container>
+        </div>
+      </motion.div>
+
+      {/* Venue Showcase Section */}
+      <motion.div
+        className="mb-16"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 0.6, delay: 0.4 }}
+        viewport={{ once: true }}
+      >
+        <div className="grid grid-cols-1 md:grid-cols-5 md:gap-6 items-center max-w-7xl mx-auto">
+          {/* Left Image */}
+          <motion.div
+            className="relative h-64 md:h-80 rounded-3xl overflow-hidden shadow-2xl transition-transform duration-300 hover:scale-[1.02] col-start-1 row-start-1"
+            whileHover={{ scale: 1.02 }}
+            transition={{ duration: 0.3 }}
+          >
+            <Image
+              src="/assets/venue/venue-1.jpg"
+              alt="Wedding venue left"
+              fill
+              className="object-cover"
+            />
+          </motion.div>
+          {/* Center Content */}
+          <motion.div
+            className="text-center px-4 my-8 md:my-0 col-span-3 row-start-3 md:row-start-1"
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            viewport={{ once: true }}
+          >
+            {/* Venue Image */}
+            <div className="relative h-40 md:h-48 mb-6 rounded-2xl overflow-hidden shadow-lg">
+              <Image
+                src="/assets/venue/mosque.jpg"
+                alt="Masjid Raya Baiturrahman"
+                fill
+                className="object-cover"
+              />
+            </div>
+
+            {/* Venue Details */}
+
+            <h3 className="text-xl font-semibold text-gray-900 mb-2">
+              December 27th, 2025
+            </h3>
+            <h4 className="font-semibold text-gray-900 mb-2">
+              Masjid Raya Baiturrahman, Banda Aceh, Indonesia
+            </h4>
+
+            {/* Get Direction Button */}
+            <motion.button
+              className="bg-gray-800 hover:bg-gray-700 text-white px-8 py-3 rounded-full font-medium transition-all duration-300 cursor-pointer border-none"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              onClick={() =>
+                window.open(
+                  "https://maps.google.com/?q=Masjid+Raya+Baiturrahman+Banda+Aceh",
+                  "_blank"
+                )
+              }
+            >
+              Get Direction
+            </motion.button>
+          </motion.div>
+          {/* Right Image */}
+          <motion.div
+            className="relative h-64 md:h-80 rounded-3xl overflow-hidden shadow-2xl transition-transform duration-300 hover:scale-[1.02] md:col-start-5 row-start-2 md:row-start-1"
+            whileHover={{ scale: 1.02 }}
+            transition={{ duration: 0.3 }}
+          >
+            <Image
+              src="/assets/venue/venue-2.jpg"
+              alt="Wedding venue right"
+              fill
+              className="object-cover"
+            />
+          </motion.div>
+        </div>
+      </motion.div>
     </section>
   );
 }
