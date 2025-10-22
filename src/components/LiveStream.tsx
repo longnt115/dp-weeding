@@ -48,7 +48,7 @@ export default function LiveStream() {
   };
 
   return (
-    <section className="py-16 bg-linear-to-r from-wedding-light to-white
+    <section className="py-16 bg-linear-to-r from-wedding-light to-white">
       <Container>
         <motion.div
           className="text-center mb-12"
@@ -60,7 +60,7 @@ export default function LiveStream() {
           <h2 className="text-3xl md:text-4xl font-bold text-[#3a3a3a] mb-2">
             Follow Our Live Stream
           </h2>
-          <p className="text-[#666666]
+          <p className="text-[#666666]">
             Bergabunglah dengan kami secara online di media sosial favorit Anda
           </p>
         </motion.div>

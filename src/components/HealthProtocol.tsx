@@ -51,7 +51,7 @@ export default function HealthProtocol() {
   };
 
   return (
-    <section className="py-16 bg-white
+    <section className="py-16 bg-white">
       <Container>
         <motion.div
           className="text-center mb-12"
@@ -63,7 +63,7 @@ export default function HealthProtocol() {
           <h2 className="text-3xl md:text-4xl font-bold text-[#3a3a3a] mb-2">
             Health Protocol
           </h2>
-          <p className="text-[#666666]
+          <p className="text-[#666666]">
             Kesehatan dan keselamatan tamu kami adalah prioritas utama
           </p>
         </motion.div>
@@ -80,13 +80,13 @@ export default function HealthProtocol() {
               key={index}
               variants={itemVariants}
               whileHover={{ scale: 1.05, y: -5 }}
-              className="text-center p-6 rounded-2xl bg-linear-to-br from-wedding-light to-[#e8e8e8] shadow-lg hover:shadow-xl transition-shadow border border-[#e0e0e0]
+              className="text-center p-6 rounded-2xl bg-linear-to-br from-wedding-light to-[#e8e8e8] shadow-lg hover:shadow-xl transition-shadow border border-[#e0e0e0]"
             >
               <div className="text-5xl mb-4">{protocol.icon}</div>
               <h3 className="text-lg font-bold text-[#3a3a3a] mb-2">
                 {protocol.title}
               </h3>
-              <p className="text-sm text-[#666666]
+              <p className="text-sm text-[#666666]">
                 {protocol.description}
               </p>
             </motion.div>
