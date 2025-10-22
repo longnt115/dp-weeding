@@ -1,33 +1,36 @@
-'use client';
+"use client";
 
-import Container from './common/Container';
+import Container from "./common/Container";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   const quickLinks = [
-    { label: 'Home', href: '#home' },
-    { label: 'Our Story', href: '#story' },
-    { label: 'Gallery', href: '#gallery' },
-    { label: 'Events', href: '#events' },
+    { label: "Home", href: "#home" },
+    { label: "Our Story", href: "#story" },
+    { label: "Gallery", href: "#gallery" },
+    { label: "Events", href: "#events" },
   ];
 
   const socialLinks = [
-    { name: 'Facebook', url: '#', icon: '👍' },
-    { name: 'Instagram', url: '#', icon: '📷' },
-    { name: 'Twitter', url: '#', icon: '🐦' },
-    { name: 'Pinterest', url: '#', icon: '📌' },
+    { name: "Facebook", url: "#", icon: "👍" },
+    { name: "Instagram", url: "#", icon: "📷" },
+    { name: "Twitter", url: "#", icon: "🐦" },
+    { name: "Pinterest", url: "#", icon: "📌" },
   ];
 
   return (
-    <footer className="bg-[#3a3a3a] text-white mt-20">
+    <footer className="bg-wedding-dark text-white mt-20">
       <Container className="py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           {/* Brand */}
           <div>
-            <h3 className="text-2xl font-bold text-[#d4af37] mb-2">💍 Our Wedding</h3>
+            <h3 className="text-2xl font-bold text-[#d4af37] mb-2">
+              💍 Our Wedding
+            </h3>
             <p className="text-[#b0b0b0]">
-              Celebrating our love story and creating unforgettable memories with our loved ones.
+              Celebrating our love story and creating unforgettable memories
+              with our loved ones.
             </p>
           </div>
 
@@ -69,7 +72,8 @@ export default function Footer() {
         {/* Divider */}
         <div className="border-t border-[#555555] pt-8">
           <p className="text-center text-[#b0b0b0]">
-            &copy; {currentYear} Our Wedding. All rights reserved. Made with love.
+            &copy; {currentYear} Our Wedding. All rights reserved. Made with
+            love.
           </p>
         </div>
       </Container>

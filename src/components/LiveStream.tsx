@@ -9,14 +9,14 @@ export default function LiveStream() {
       icon: '📘',
       name: 'Facebook',
       handle: '@sarahjohn2024',
-      color: 'from-[#d4af37] to-[#c9a961]',
+      color: 'from-wedding-gold to-[#c9a961]',
       hoverColor: 'hover:from-[#c9a961] hover:to-[#b8975b]',
     },
     {
       icon: '📷',
       name: 'Instagram',
       handle: '@sarahjohn.wedding',
-      color: 'from-[#d4af37] to-[#c9a961]',
+      color: 'from-wedding-gold to-[#c9a961]',
       hoverColor: 'hover:from-[#c9a961] hover:to-[#b8975b]',
     },
     {
@@ -48,7 +48,7 @@ export default function LiveStream() {
   };
 
   return (
-    <section className="py-16 bg-gradient-to-r from-[#f5f5f5] to-white
+    <section className="py-16 bg-linear-to-r from-wedding-light to-white
       <Container>
         <motion.div
           className="text-center mb-12"
@@ -80,7 +80,7 @@ export default function LiveStream() {
               className="relative group overflow-hidden rounded-2xl shadow-lg"
             >
               <div
-                className={`bg-gradient-to-br ${platform.color} ${platform.hoverColor} transition-all duration-300 p-8 h-full flex flex-col items-center justify-center text-white`}
+                className={`bg-linear-to-br ${platform.color} ${platform.hoverColor} transition-all duration-300 p-8 h-full flex flex-col items-center justify-center text-white`}
               >
                 {/* Animated background elements */}
                 <motion.div

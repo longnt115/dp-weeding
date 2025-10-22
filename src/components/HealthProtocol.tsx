@@ -80,7 +80,7 @@ export default function HealthProtocol() {
               key={index}
               variants={itemVariants}
               whileHover={{ scale: 1.05, y: -5 }}
-              className="text-center p-6 rounded-2xl bg-gradient-to-br from-[#f5f5f5] to-[#e8e8e8] shadow-lg hover:shadow-xl transition-shadow border border-[#e0e0e0]
+              className="text-center p-6 rounded-2xl bg-linear-to-br from-wedding-light to-[#e8e8e8] shadow-lg hover:shadow-xl transition-shadow border border-[#e0e0e0]
             >
               <div className="text-5xl mb-4">{protocol.icon}</div>
               <h3 className="text-lg font-bold text-[#3a3a3a] mb-2">

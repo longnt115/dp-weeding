@@ -1,7 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
-
 interface TimeLeft {
   days: number;
   hours: number;
@@ -63,15 +62,6 @@ export default function Countdown() {
     },
   };
 
-  const itemVariants = {
-    hidden: { opacity: 0, scale: 0.8 },
-    visible: {
-      opacity: 1,
-      scale: 1,
-      transition: { duration: 0.5 },
-    },
-  };
-
   const CountdownCard = ({
     value,
     label,
@@ -81,26 +71,23 @@ export default function Countdown() {
     label: string;
     className?: string;
   }) => (
-    <motion.div
-      variants={itemVariants}
-      className={`flex flex-col items-center ${className}`}
-    >
+    <div className={`flex flex-col items-center ${className}`}>
       <div className="relative">
-        <div className="w-20 h-20 md:w-24 md:h-24 bg-gradient-to-br from-[#d4af37] to-[#c9a961] rounded-lg flex items-center justify-center shadow-lg">
+        <div className="w-20 flex items-center justify-center">
           <span className="text-3xl md:text-4xl font-bold text-white">
             {String(value).padStart(2, "0")}
           </span>
         </div>
       </div>
-      <p className="mt-3 text-white font-semibold uppercase text-sm md:text-base">
+      <p className="mt-3 text-white font-semibold text-2xl md:text-3xl alex-brush-regular">
         {label}
       </p>
-    </motion.div>
+    </div>
   );
 
   return (
-    <section className="md:max-width-[768px] py-16 bg-gradient-to-r from-[#f5f5f5] to-[#e8e8e8]">
-      <div className="rounded-3xl mx-auto px-4 sm:px-6 lg:px-8 max-w-5xl bg-gray-700">
+    <section className="md:max-width-[768px] px-4 sm:px-6 py-16 bg-linear-to-r from-wedding-light to-[#e8e8e8]">
+      <div className="rounded-3xl mx-auto lg:px-8 max-w-6xl bg-gray-600">
         <motion.div
           className="text-center mb-12"
           initial={{ opacity: 0, y: -30 }}
@@ -124,17 +111,17 @@ export default function Countdown() {
           viewport={{ once: true }}
         >
           <CountdownCard
-            className="mr-[3.5rem]"
+            className="mr-5 sm:mr-7 md:mr-10"
             value={timeLeft.days}
             label="Days"
           />
           <CountdownCard
-            className="mr-[3.5rem]"
+            className="mr-5 sm:mr-7 md:mr-10"
             value={timeLeft.hours}
             label="Hours"
           />
           <CountdownCard
-            className="mr-[3.5rem]"
+            className="mr-5 sm:mr-7 md:mr-10"
             value={timeLeft.minutes}
             label="Minutes"
           />

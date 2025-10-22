@@ -35,7 +35,7 @@ export default function OurStory() {
           <h2 className="text-4xl md:text-5xl font-bold mb-4 text-gray-900">
             Our Love Story
           </h2>
-          <div className="w-16 h-1 bg-gradient-to-r from-amber-500 to-rose-500 mx-auto mb-4" />
+          <div className="w-16 h-1 bg-linear-to-r from-amber-500 to-rose-500 mx-auto mb-4" />
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             A journey of love, laughter, and beautiful moments that led us here
           </p>
@@ -56,9 +56,9 @@ export default function OurStory() {
               whileHover={{ y: -10 }}
               className="relative group overflow-hidden rounded-2xl shadow-lg"
             >
-              <div className="aspect-video bg-gradient-to-br from-amber-200 to-rose-200 flex items-center justify-center text-8xl relative">
+              <div className="aspect-video bg-linear-to-br from-amber-200 to-rose-200 flex items-center justify-center text-8xl relative">
                 👰💍
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <div className="absolute inset-0 bg-linear-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               </div>
             </motion.div>
           ))}
@@ -80,7 +80,7 @@ export default function OurStory() {
               transition={{ type: "spring", stiffness: 300 }}
             >
               <div className="w-32 h-32 md:w-40 md:h-40 mx-auto mb-6 rounded-2xl overflow-hidden shadow-lg">
-                <div className="w-full h-full bg-gradient-to-br from-amber-200 to-yellow-200 flex items-center justify-center text-7xl">
+                <div className="w-full h-full bg-linear-to-br from-amber-200 to-yellow-200 flex items-center justify-center text-7xl">
                   🤵
                 </div>
               </div>
@@ -97,7 +97,7 @@ export default function OurStory() {
               transition={{ type: "spring", stiffness: 300 }}
             >
               <div className="w-32 h-32 md:w-40 md:h-40 mx-auto mb-6 rounded-2xl overflow-hidden shadow-lg">
-                <div className="w-full h-full bg-gradient-to-br from-rose-200 to-pink-200 flex items-center justify-center text-7xl">
+                <div className="w-full h-full bg-linear-to-br from-rose-200 to-pink-200 flex items-center justify-center text-7xl">
                   👰
                 </div>
               </div>
@@ -120,7 +120,7 @@ export default function OurStory() {
           <div className="grid md:grid-cols-2 gap-6">
             {/* Akad Nikah Card */}
             <motion.div
-              className="bg-gradient-to-br from-gray-100 to-gray-50 rounded-2xl p-8 text-center shadow-lg hover:shadow-xl transition-shadow"
+              className="bg-linear-to-br from-gray-100 to-gray-50 rounded-2xl p-8 text-center shadow-lg hover:shadow-xl transition-shadow"
               whileHover={{ y: -5 }}
             >
               <h3 className="text-2xl font-bold text-gray-900 mb-4">
@@ -147,7 +147,7 @@ export default function OurStory() {
 
             {/* Resepsi Nikah Card */}
             <motion.div
-              className="bg-gradient-to-br from-gray-100 to-gray-50 rounded-2xl p-8 text-center shadow-lg hover:shadow-xl transition-shadow"
+              className="bg-linear-to-br from-gray-100 to-gray-50 rounded-2xl p-8 text-center shadow-lg hover:shadow-xl transition-shadow"
               whileHover={{ y: -5 }}
             >
               <h3 className="text-2xl font-bold text-gray-900 mb-4">

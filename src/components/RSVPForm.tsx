@@ -106,7 +106,7 @@ export default function RSVPForm() {
   return (
     <section
       id="rsvp"
-      className="py-20 bg-gradient-to-br from-[#f5f5f5] to-white"
+      className="py-20 bg-linear-to-br from-wedding-light to-white"
     >
       <Container>
         <motion.div
@@ -119,7 +119,7 @@ export default function RSVPForm() {
           <h2 className="text-4xl md:text-5xl font-bold mb-4 text-[#3a3a3a]">
             RSVP & Wishes
           </h2>
-          <div className="w-16 h-1 bg-gradient-to-r from-[#d4af37] to-[#c9a961] mx-auto mb-4" />
+          <div className="w-16 h-1 bg-linear-to-r from-wedding-gold to-[#c9a961] mx-auto mb-4" />
           <p className="text-lg text-[#666666] max-w-2xl mx-auto">
             Confirm your attendance and share your wishes with us
           </p>

@@ -79,7 +79,7 @@ export default function Events() {
           <h2 className="text-4xl md:text-5xl font-bold mb-4 text-[#3a3a3a]">
             Wedding Events
           </h2>
-          <div className="w-16 h-1 bg-gradient-to-r from-[#d4af37] to-[#c9a961] mx-auto mb-4">
+          <div className="w-16 h-1 bg-linear-to-r from-wedding-gold to-[#c9a961] mx-auto mb-4">
             <p className="text-lg text-[#666666] max-w-2xl mx-auto">
               Important dates, times, and locations for our celebration
             </p>
@@ -102,7 +102,7 @@ export default function Events() {
             >
               {/* Timeline connector */}
               {index < events.length - 1 && (
-                <div className="hidden md:block absolute left-12 top-24 w-1 h-12 bg-gradient-to-b from-[#d4af37] to-transparent" />
+                <div className="hidden md:block absolute left-12 top-24 w-1 h-12 bg-gradient-to-b from-wedding-gold to-transparent" />
               )}
 
               <div className="flex gap-6">
@@ -111,7 +111,7 @@ export default function Events() {
                   className="flex-shrink-0 mt-1"
                   whileHover={{ scale: 1.2 }}
                 >
-                  <div className="w-8 h-8 rounded-full bg-gradient-to-br from-[#d4af37] to-[#c9a961] flex items-center justify-center text-[#3a3a3a] text-lg font-bold shadow-md">
+                  <div className="w-8 h-8 rounded-full bg-linear-to-br from-wedding-gold to-[#c9a961] flex items-center justify-center text-[#3a3a3a] text-lg font-bold shadow-md">
                     {index + 1}
                   </div>
                 </motion.div>

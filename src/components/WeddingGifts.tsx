@@ -57,7 +57,7 @@ export default function WeddingGifts() {
           <h2 className="text-4xl md:text-5xl font-bold mb-4 text-[#3a3a3a]">
             Wedding Gifts
           </h2>
-          <div className="w-16 h-1 bg-gradient-to-r from-[#d4af37] to-[#c9a961] mx-auto mb-4" />
+          <div className="w-16 h-1 bg-linear-to-r from-wedding-gold to-[#c9a961] mx-auto mb-4" />
           <p className="text-lg text-[#666666] max-w-2xl mx-auto">
             Kehadiran Anda adalah hadiah terbesar bagi kami. Namun jika Anda
             ingin memberikan hadiah, berikut beberapa pilihan
@@ -78,9 +78,9 @@ export default function WeddingGifts() {
               whileHover={{ y: -10 }}
               className="relative group"
             >
-              <div className="bg-gradient-to-br from-[#f5f5f5] to-[#e8e8e8] rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 h-full flex flex-col border border-[#e0e0e0]">
+              <div className="bg-linear-to-br from-wedding-light to-[#e8e8e8] rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 h-full flex flex-col border border-[#e0e0e0]">
                 {/* Decorative top border */}
-                <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#d4af37] to-[#c9a961] rounded-t-2xl" />
+                <div className="absolute top-0 left-0 right-0 h-1 bg-linear-to-r from-wedding-gold to-[#c9a961] rounded-t-2xl" />
                 <div className="text-5xl mb-4">{gift.icon}</div>
                 <h3 className="text-2xl font-bold text-[#3a3a3a] mb-3">
                   {gift.title}
@@ -100,7 +100,7 @@ export default function WeddingGifts() {
         </motion.div>
 
         <motion.div
-          className="bg-gradient-to-r from-[#f5f5f5] to-[#e8e8e8] rounded-2xl p-8 md:p-12 text-center border border-[#d4af37]"
+          className="bg-linear-to-r from-wedding-light to-[#e8e8e8] rounded-2xl p-8 md:p-12 text-center border border-[#d4af37]"
           initial={{ opacity: 0, scale: 0.95 }}
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.6, delay: 0.3 }}
