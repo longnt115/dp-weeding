@@ -1,33 +1,33 @@
-'use client';
-import { motion } from 'framer-motion';
-import Container from './common/Container';
+"use client";
+import { motion } from "framer-motion";
+import Container from "./common/Container";
 
 export default function HealthProtocol() {
   const protocols = [
     {
-      icon: '🧼',
-      title: 'Hand Sanitizer',
-      description: 'Sanitizer tersedia di setiap sudut venue',
+      icon: "🧼",
+      title: "Hand Sanitizer",
+      description: "Sanitizer tersedia di setiap sudut venue",
     },
     {
-      icon: '😷',
-      title: 'Masker',
-      description: 'Gunakan masker sesuai kebutuhan Anda',
+      icon: "😷",
+      title: "Masker",
+      description: "Gunakan masker sesuai kebutuhan Anda",
     },
     {
-      icon: '🌡️',
-      title: 'Pengecekan Suhu',
-      description: 'Pengecekan suhu tubuh saat masuk venue',
+      icon: "🌡️",
+      title: "Pengecekan Suhu",
+      description: "Pengecekan suhu tubuh saat masuk venue",
     },
     {
-      icon: '🧑‍⚕️',
-      title: 'Tenaga Medis',
-      description: 'Tim medis siap membantu sepanjang acara',
+      icon: "🧑‍⚕️",
+      title: "Tenaga Medis",
+      description: "Tim medis siap membantu sepanjang acara",
     },
     {
-      icon: '🚭',
-      title: 'Jarak Aman',
-      description: 'Jaga jarak aman dengan peserta lain',
+      icon: "🚭",
+      title: "Jarak Aman",
+      description: "Jaga jarak aman dengan peserta lain",
     },
   ];
 
@@ -51,25 +51,25 @@ export default function HealthProtocol() {
   };
 
   return (
-    <section className="py-16 bg-white">
+    <section className="py-10 sm:py-12 md:py-16 bg-white px-4 sm:px-6">
       <Container>
         <motion.div
-          className="text-center mb-12"
+          className="text-center mb-8 sm:mb-10 md:mb-12"
           initial={{ opacity: 0, y: -30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-[#3a3a3a] mb-2">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-wedding-dark mb-2">
             Health Protocol
           </h2>
-          <p className="text-[#666666]">
+          <p className="text-sm sm:text-base text-wedding-secondary px-4">
             Kesehatan dan keselamatan tamu kami adalah prioritas utama
           </p>
         </motion.div>
 
         <motion.div
-          className="grid grid-cols-1 md:grid-cols-5 gap-6"
+          className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3 sm:gap-4 md:gap-6"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
@@ -80,13 +80,13 @@ export default function HealthProtocol() {
               key={index}
               variants={itemVariants}
               whileHover={{ scale: 1.05, y: -5 }}
-              className="text-center p-6 rounded-2xl bg-linear-to-br from-wedding-light to-[#e8e8e8] shadow-lg hover:shadow-xl transition-shadow border border-[#e0e0e0]"
+              className="text-center p-6 rounded-2xl bg-linear-to-br from-wedding-light to-gray-100 shadow-lg hover:shadow-xl transition-shadow border border-wedding-border"
             >
               <div className="text-5xl mb-4">{protocol.icon}</div>
-              <h3 className="text-lg font-bold text-[#3a3a3a] mb-2">
+              <h3 className="text-lg font-bold text-wedding-dark mb-2">
                 {protocol.title}
               </h3>
-              <p className="text-sm text-[#666666]">
+              <p className="text-sm text-wedding-secondary">
                 {protocol.description}
               </p>
             </motion.div>

@@ -27,17 +27,17 @@ export default function Button({
 
   const variantStyles = {
     primary:
-      "bg-wedding-dark text-white hover:bg-[#2a2a2a] focus:ring-[#3a3a3a]",
+      "bg-wedding-dark text-white hover:bg-gray-800 focus:ring-wedding-dark",
     secondary:
-      "bg-[#f5f5f5] text-[#3a3a3a] hover:bg-[#e0e0e0] focus:ring-[#d4af37]",
+      "bg-wedding-light text-wedding-dark hover:bg-wedding-border focus:ring-wedding-gold",
     outline:
-      "border-2 border-[#d4af37] text-[#d4af37] hover:bg-[#fff8e7] focus:ring-[#d4af37]",
+      "border-2 border-wedding-gold text-wedding-gold hover:bg-yellow-50 focus:ring-wedding-gold",
   };
 
   const sizeStyles = {
-    sm: "px-4 py-2 text-sm",
-    md: "px-6 py-3 text-base",
-    lg: "px-8 py-4 text-lg",
+    sm: "px-3 sm:px-4 py-2 text-xs sm:text-sm",
+    md: "px-4 sm:px-6 py-2.5 sm:py-3 text-sm sm:text-base",
+    lg: "px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg",
   };
 
   return (

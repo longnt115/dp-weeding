@@ -17,8 +17,8 @@ export default function Countdown() {
   });
 
   useEffect(() => {
-    // Set the wedding date (update this to your actual wedding date)
-    const weddingDate = new Date("2025-11-14T00:00:00").getTime();
+    // Set the wedding date (December 27, 2025 at midnight)
+    const weddingDate = new Date("2025-12-27T00:00:00").getTime();
 
     const calculateTimeLeft = () => {
       const now = new Date().getTime();
@@ -73,58 +73,46 @@ export default function Countdown() {
   }) => (
     <div className={`flex flex-col items-center ${className}`}>
       <div className="relative">
-        <div className="w-20 flex items-center justify-center">
-          <span className="text-3xl md:text-4xl md:text-6xl font-bold text-white">
+        <div className="w-14 sm:w-16 md:w-20 lg:w-24 flex items-center justify-center">
+          <span className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-white">
             {String(value).padStart(2, "0")}
           </span>
         </div>
       </div>
-      <p className="mt-3 text-white font-semibold text-xl md:text-3xl alex-brush-regular">
+      <p className="mt-2 sm:mt-3 text-white font-semibold text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl alex-brush-regular">
         {label}
       </p>
     </div>
   );
 
   return (
-    <section className="md:max-width-[768px] px-4 sm:px-6 py-16 bg-linear-to-r from-wedding-light to-[#e8e8e8]">
-      <div className="rounded-3xl mx-auto lg:px-8 max-w-6xl bg-gray-600">
+    <section className="px-4 sm:px-6 py-10 sm:py-12 md:py-16 bg-linear-to-r from-wedding-light to-[#e8e8e8]">
+      <div className="rounded-2xl sm:rounded-3xl mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl bg-gray-600">
         <motion.div
-          className="text-center mb-7 sm:mb-12"
+          className="text-center mb-6 sm:mb-8 md:mb-12"
           initial={{ opacity: 0, y: -30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-2 pt-6">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-2 pt-4 sm:pt-5 md:pt-6">
             Counting Days
           </h2>
-          <h4 className="text-[#b0b0b0]">
+          <h4 className="text-sm sm:text-base text-gray-300 px-4">
             We can&apos;t wait to celebrate with you!
           </h4>
         </motion.div>
 
         <motion.div
-          className="flex flex-row justify-center pb-6"
+          className="flex flex-row justify-center items-center pb-4 sm:pb-5 md:pb-6 gap-2 sm:gap-4 md:gap-6 lg:gap-10"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
         >
-          <CountdownCard
-            className="mr-2 sm:mr-7 md:mr-10"
-            value={timeLeft.days}
-            label="Days"
-          />
-          <CountdownCard
-            className="mr-2 sm:mr-7 md:mr-10"
-            value={timeLeft.hours}
-            label="Hours"
-          />
-          <CountdownCard
-            className="mr-2 sm:mr-7 md:mr-10"
-            value={timeLeft.minutes}
-            label="Minutes"
-          />
+          <CountdownCard value={timeLeft.days} label="Days" />
+          <CountdownCard value={timeLeft.hours} label="Hours" />
+          <CountdownCard value={timeLeft.minutes} label="Minutes" />
           <CountdownCard value={timeLeft.seconds} label="Seconds" />
         </motion.div>
       </div>

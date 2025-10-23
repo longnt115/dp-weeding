@@ -67,28 +67,30 @@ export default function Events() {
   const emojis = ["🎉", "🍾", "💃", "☀️"];
 
   return (
-    <section id="events" className="py-20 bg-white">
+    <section
+      id="events"
+      className="py-10 sm:py-16 md:py-20 bg-white px-4 sm:px-6"
+    >
       <Container>
         <motion.div
-          className="text-center mb-16"
+          className="text-center mb-8 sm:mb-12 md:mb-16"
           initial={{ opacity: 0, y: -30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-[#3a3a3a]">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-3 sm:mb-4 text-wedding-dark">
             Wedding Events
           </h2>
-          <div className="w-16 h-1 bg-linear-to-r from-wedding-gold to-[#c9a961] mx-auto mb-4">
-            <p className="text-lg text-[#666666] max-w-2xl mx-auto">
-              Important dates, times, and locations for our celebration
-            </p>
-          </div>
+          <div className="w-12 sm:w-16 h-1 bg-linear-to-r from-wedding-gold to-[#c9a961] mx-auto mb-3 sm:mb-4" />
+          <p className="text-base sm:text-lg text-wedding-secondary max-w-2xl mx-auto px-4">
+            Important dates, times, and locations for our celebration
+          </p>
         </motion.div>
 
         {/* Timeline View */}
         <motion.div
-          className="space-y-6 mb-12"
+          className="space-y-4 sm:space-y-6 mb-8 sm:mb-12"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
@@ -102,40 +104,43 @@ export default function Events() {
             >
               {/* Timeline connector */}
               {index < events.length - 1 && (
-                <div className="hidden md:block absolute left-12 top-24 w-1 h-12 bg-gradient-to-b from-wedding-gold to-transparent" />
+                <div className="hidden md:block absolute left-12 top-20 lg:top-24 w-1 h-8 lg:h-12 bg-gradient-to-b from-wedding-gold to-transparent" />
               )}
 
-              <div className="flex gap-6">
+              <div className="flex gap-3 sm:gap-4 md:gap-6">
                 {/* Timeline dot */}
                 <motion.div
                   className="flex-shrink-0 mt-1"
                   whileHover={{ scale: 1.2 }}
                 >
-                  <div className="w-8 h-8 rounded-full bg-linear-to-br from-wedding-gold to-[#c9a961] flex items-center justify-center text-[#3a3a3a] text-lg font-bold shadow-md">
+                  <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-linear-to-br from-wedding-gold to-[#c9a961] flex items-center justify-center text-wedding-dark text-base sm:text-lg font-bold shadow-md">
                     {index + 1}
                   </div>
                 </motion.div>
 
                 {/* Event Card */}
-                <Card className="flex-1 hover:shadow-xl transition-shadow">
-                  <div className="flex items-start justify-between mb-4">
+                <Card className="flex-1 hover:shadow-xl transition-shadow p-4 sm:p-6">
+                  <div className="flex items-start justify-between mb-3 sm:mb-4">
                     <div>
-                      <h3 className="text-2xl md:text-3xl font-bold text-[#3a3a3a] flex items-center gap-2">
-                        <span className="text-3xl">{emojis[index]}</span>
-                        {event.title}
+                      <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-wedding-dark flex items-center gap-2 flex-wrap">
+                        <span className="text-2xl sm:text-3xl">
+                          {emojis[index]}
+                        </span>
+                        <span>{event.title}</span>
                       </h3>
                     </div>
                   </div>
 
-                  <div className="space-y-3 mb-4">
+                  <div className="space-y-2 sm:space-y-3 mb-3 sm:mb-4">
                     <motion.div
-                      className="flex items-center gap-3 text-[#404040]"
+                      className="flex items-center gap-2 sm:gap-3 text-wedding-text-dark text-sm sm:text-base"
                       whileHover={{ x: 5 }}
                     >
                       <svg
-                        className="w-5 h-5 text-[#d4af37]"
+                        className="w-4 h-4 sm:w-5 sm:h-5 text-wedding-gold flex-shrink-0"
                         fill="currentColor"
                         viewBox="0 0 20 20"
+                        aria-hidden="true"
                       >
                         <path
                           fillRule="evenodd"
@@ -147,13 +152,14 @@ export default function Events() {
                     </motion.div>
 
                     <motion.div
-                      className="flex items-center gap-3 text-[#404040]"
+                      className="flex items-center gap-2 sm:gap-3 text-wedding-text-dark text-sm sm:text-base"
                       whileHover={{ x: 5 }}
                     >
                       <svg
-                        className="w-5 h-5 text-[#d4af37]"
+                        className="w-4 h-4 sm:w-5 sm:h-5 text-wedding-gold flex-shrink-0"
                         fill="currentColor"
                         viewBox="0 0 20 20"
+                        aria-hidden="true"
                       >
                         <path
                           fillRule="evenodd"
@@ -165,13 +171,14 @@ export default function Events() {
                     </motion.div>
 
                     <motion.div
-                      className="flex items-center gap-3 text-[#404040]"
+                      className="flex items-start gap-2 sm:gap-3 text-wedding-text-dark text-sm sm:text-base"
                       whileHover={{ x: 5 }}
                     >
                       <svg
-                        className="w-5 h-5 text-[#d4af37]"
+                        className="w-4 h-4 sm:w-5 sm:h-5 text-wedding-gold flex-shrink-0 mt-0.5"
                         fill="currentColor"
                         viewBox="0 0 20 20"
+                        aria-hidden="true"
                       >
                         <path
                           fillRule="evenodd"
@@ -179,11 +186,13 @@ export default function Events() {
                           clipRule="evenodd"
                         />
                       </svg>
-                      <span className="font-semibold">{event.location}</span>
+                      <span className="font-semibold break-words">
+                        {event.location}
+                      </span>
                     </motion.div>
                   </div>
 
-                  <p className="text-[#666666] leading-relaxed">
+                  <p className="text-wedding-secondary leading-relaxed text-sm sm:text-base">
                     {event.description}
                   </p>
                 </Card>
@@ -194,39 +203,43 @@ export default function Events() {
 
         {/* Map Section */}
         <motion.div
-          className="mt-12 pt-12 border-t border-[#e0e0e0]"
+          className="mt-8 sm:mt-12 pt-8 sm:pt-12 border-t border-wedding-border"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.3 }}
           viewport={{ once: true }}
         >
-          <div className="grid md:grid-cols-2 gap-8">
-            <Card>
-              <h3 className="text-2xl font-bold text-[#3a3a3a] mb-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 md:gap-8">
+            <Card className="p-4 sm:p-6">
+              <h3 className="text-xl sm:text-2xl font-bold text-wedding-dark mb-3 sm:mb-4">
                 📍 Ceremony Venue
               </h3>
-              <p className="text-[#666666] mb-4">
+              <p className="text-wedding-secondary mb-3 sm:mb-4 text-sm sm:text-base">
                 Garden Venue
                 <br />
                 123 Love Street
                 <br />
                 Romance City, ST 12345
               </p>
-              <p className="text-sm text-[#999999]">+1 (555) 123-4567</p>
+              <p className="text-xs sm:text-sm text-gray-500">
+                +1 (555) 123-4567
+              </p>
             </Card>
 
-            <Card>
-              <h3 className="text-2xl font-bold text-[#3a3a3a] mb-4">
+            <Card className="p-4 sm:p-6">
+              <h3 className="text-xl sm:text-2xl font-bold text-wedding-dark mb-3 sm:mb-4">
                 🎊 Reception Venue
               </h3>
-              <p className="text-[#666666] mb-4">
+              <p className="text-wedding-secondary mb-3 sm:mb-4 text-sm sm:text-base">
                 Grand Ballroom
                 <br />
                 456 Celebration Ave
                 <br />
                 Romance City, ST 12345
               </p>
-              <p className="text-sm text-[#999999]">+1 (555) 987-6543</p>
+              <p className="text-xs sm:text-sm text-gray-500">
+                +1 (555) 987-6543
+              </p>
             </Card>
           </div>
         </motion.div>

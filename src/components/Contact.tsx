@@ -57,30 +57,33 @@ export default function Contact() {
   };
 
   const inputClasses =
-    "w-full px-4 py-3 rounded-lg border border-[#e0e0e0] bg-white text-[#3a3a3a] focus:outline-none focus:ring-2 focus:ring-[#d4af37] transition-all duration-300";
+    "w-full px-4 py-3 rounded-lg border border-wedding-border bg-white text-wedding-dark focus:outline-none focus:ring-2 focus:ring-wedding-gold transition-all duration-300";
 
-  const labelClasses = "block text-sm font-semibold text-[#3a3a3a] mb-2";
+  const labelClasses = "block text-sm font-semibold text-wedding-dark mb-2";
 
   return (
-    <section id="contact" className="py-20 bg-white">
+    <section
+      id="contact"
+      className="py-10 sm:py-16 md:py-20 bg-white px-4 sm:px-6"
+    >
       <Container>
         <motion.div
-          className="text-center mb-12"
+          className="text-center mb-8 sm:mb-10 md:mb-12"
           initial={{ opacity: 0, y: -30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-[#3a3a3a]">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-3 sm:mb-4 text-wedding-dark">
             Get in Touch
           </h2>
-          <div className="w-16 h-1 bg-linear-to-r from-wedding-gold to-[#c9a961] mx-auto mb-4" />
-          <p className="text-lg text-[#666666] max-w-2xl mx-auto">
+          <div className="w-12 sm:w-16 h-1 bg-linear-to-r from-wedding-gold to-[#c9a961] mx-auto mb-3 sm:mb-4" />
+          <p className="text-base sm:text-lg text-wedding-secondary max-w-2xl mx-auto px-4">
             Have questions or special requests? We&apos;d love to hear from you!
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 md:gap-12">
           {/* Contact Information */}
           <motion.div
             className="space-y-8"
@@ -90,10 +93,10 @@ export default function Contact() {
             viewport={{ once: true }}
           >
             <div>
-              <h3 className="text-2xl font-bold text-[#3a3a3a] mb-4">
+              <h3 className="text-2xl font-bold text-wedding-dark mb-4">
                 Contact Information
               </h3>
-              <p className="text-[#666666] leading-relaxed mb-6">
+              <p className="text-wedding-secondary leading-relaxed mb-6">
                 We&apos;d love to connect with you! Reach out through any of the
                 methods below or fill out the contact form.
               </p>
@@ -105,9 +108,9 @@ export default function Contact() {
               whileHover={{ x: 10 }}
               transition={{ type: "spring", stiffness: 300 }}
             >
-              <div className="flex-shrink-0 w-12 h-12 rounded-full bg-[#f5f5f5] flex items-center justify-center">
+              <div className="flex-shrink-0 w-12 h-12 rounded-full bg-wedding-light flex items-center justify-center">
                 <svg
-                  className="w-6 h-6 text-[#d4af37]"
+                  className="w-6 h-6 text-wedding-gold"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -121,10 +124,10 @@ export default function Contact() {
                 </svg>
               </div>
               <div>
-                <h4 className="font-semibold text-[#3a3a3a] mb-1">Email</h4>
+                <h4 className="font-semibold text-wedding-dark mb-1">Email</h4>
                 <a
                   href="mailto:hello@weddingexample.com"
-                  className="text-[#666666] hover:text-[#d4af37] transition-colors"
+                  className="text-wedding-secondary hover:text-wedding-gold transition-colors"
                 >
                   hello@weddingexample.com
                 </a>
@@ -137,9 +140,9 @@ export default function Contact() {
               whileHover={{ x: 10 }}
               transition={{ type: "spring", stiffness: 300 }}
             >
-              <div className="flex-shrink-0 w-12 h-12 rounded-full bg-[#f5f5f5] flex items-center justify-center">
+              <div className="flex-shrink-0 w-12 h-12 rounded-full bg-wedding-light flex items-center justify-center">
                 <svg
-                  className="w-6 h-6 text-[#d4af37]"
+                  className="w-6 h-6 text-wedding-gold"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -153,10 +156,10 @@ export default function Contact() {
                 </svg>
               </div>
               <div>
-                <h4 className="font-semibold text-[#3a3a3a] mb-1">Phone</h4>
+                <h4 className="font-semibold text-wedding-dark mb-1">Phone</h4>
                 <a
                   href="tel:+15551234567"
-                  className="text-[#666666] hover:text-[#d4af37] transition-colors"
+                  className="text-wedding-secondary hover:text-wedding-gold transition-colors"
                 >
                   +1 (555) 123-4567
                 </a>
@@ -169,9 +172,9 @@ export default function Contact() {
               whileHover={{ x: 10 }}
               transition={{ type: "spring", stiffness: 300 }}
             >
-              <div className="flex-shrink-0 w-12 h-12 rounded-full bg-[#f5f5f5] flex items-center justify-center">
+              <div className="flex-shrink-0 w-12 h-12 rounded-full bg-wedding-light flex items-center justify-center">
                 <svg
-                  className="w-6 h-6 text-[#d4af37]"
+                  className="w-6 h-6 text-wedding-gold"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -191,8 +194,10 @@ export default function Contact() {
                 </svg>
               </div>
               <div>
-                <h4 className="font-semibold text-[#3a3a3a] mb-1">Location</h4>
-                <p className="text-[#666666]">
+                <h4 className="font-semibold text-wedding-dark mb-1">
+                  Location
+                </h4>
+                <p className="text-wedding-secondary">
                   Romance City, ST 12345
                   <br />
                   United States
@@ -202,19 +207,21 @@ export default function Contact() {
 
             {/* Social Links */}
             <motion.div
-              className="pt-8 border-t border-[#e0e0e0]"
+              className="pt-8 border-t border-wedding-border"
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               transition={{ duration: 0.6, delay: 0.3 }}
               viewport={{ once: true }}
             >
-              <h4 className="font-semibold text-[#3a3a3a] mb-4">Follow Us</h4>
+              <h4 className="font-semibold text-wedding-dark mb-4">
+                Follow Us
+              </h4>
               <div className="flex gap-4">
                 {["instagram", "facebook", "twitter"].map((social) => (
                   <motion.a
                     key={social}
                     href="#"
-                    className="w-10 h-10 rounded-full bg-[#f5f5f5] flex items-center justify-center text-[#3a3a3a] hover:bg-[#d4af37] hover:text-white transition-colors"
+                    className="w-10 h-10 rounded-full bg-wedding-light flex items-center justify-center text-wedding-dark hover:bg-wedding-gold hover:text-white transition-colors"
                     whileHover={{ scale: 1.1, rotate: 5 }}
                     whileTap={{ scale: 0.95 }}
                   >
@@ -229,7 +236,7 @@ export default function Contact() {
 
           {/* Contact Form */}
           <motion.div
-            className="bg-[#f5f5f5] rounded-2xl p-8 md:p-10"
+            className="bg-wedding-light rounded-2xl p-8 md:p-10"
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}

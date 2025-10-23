@@ -1,6 +1,6 @@
-'use client';
+"use client";
 
-import { ReactNode } from 'react';
+import { ReactNode } from "react";
 
 interface CardProps {
   children: ReactNode;
@@ -8,11 +8,17 @@ interface CardProps {
   hoverable?: boolean;
 }
 
-export default function Card({ children, className = '', hoverable = false }: CardProps) {
+export default function Card({
+  children,
+  className = "",
+  hoverable = false,
+}: CardProps) {
   return (
     <div
-      className={`bg-white rounded-lg shadow-md border border-[#e0e0e0] p-6 ${
-        hoverable ? 'hover:shadow-lg hover:border-[#d4af37] transition-all duration-300 cursor-pointer' : ''
+      className={`bg-white rounded-lg shadow-md border border-wedding-border p-4 sm:p-6 ${
+        hoverable
+          ? "hover:shadow-lg hover:border-wedding-gold transition-all duration-300 cursor-pointer"
+          : ""
       } ${className}`}
     >
       {children}
