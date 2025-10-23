@@ -31,13 +31,7 @@
   --color-wedding-light: #f5f5f5;
   --color-wedding-gold: #d4af37;
   --color-wedding-gray: #4a4a4a;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-wedding-gold-light: #c9a961;
 }
 
 body {
@@ -66,17 +60,12 @@ body {
   @apply text-[#d4af37];
 }
 
+.text-wedding-gold-light {
+  @apply text-[#c9a961];
+}
+
 .border-wedding {
   @apply border-[#e0e0e0];
-}
-
-/* Button styling with gold accent */
-.btn-wedding-primary {
-  @apply bg-wedding-dark text-white hover:bg-[#2a2a2a] transition-colors;
-}
-
-.btn-wedding-accent {
-  @apply bg-[#d4af37] text-[#3a3a3a] hover:bg-[#c9a961] transition-colors font-semibold;
 }
 
 .pinyon-script-thin {
@@ -268,4 +257,11 @@ select:focus-visible {
 /* Prevent horizontal scroll on mobile */
 body {
   overflow-x: hidden;
+}
+
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 300px !important;
+  height: 300px !important;
 }

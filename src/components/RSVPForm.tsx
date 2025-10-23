@@ -145,22 +145,22 @@ export default function RSVPForm() {
 
             {rsvpStatus === "success" && (
               <motion.div
-                className="mb-6 p-4 bg-green-50 border border-green-200 rounded-lg"
+                className="mb-6 p-4 bg-wedding-success-light border border-wedding-success rounded-lg"
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
               >
-                <p className="text-green-800 font-semibold text-sm">
+                <p className="text-wedding-success font-semibold text-sm">
                   ✓ Thank you! Your RSVP has been received.
                 </p>
               </motion.div>
             )}
             {rsvpStatus === "error" && (
               <motion.div
-                className="mb-6 p-4 bg-red-50 border border-red-200 rounded-lg"
+                className="mb-6 p-4 bg-wedding-error-light border border-wedding-error rounded-lg"
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
               >
-                <p className="text-red-800 font-semibold text-sm">
+                <p className="text-wedding-error font-semibold text-sm">
                   ✗ Something went wrong. Please try again.
                 </p>
               </motion.div>
@@ -183,7 +183,7 @@ export default function RSVPForm() {
                   {...registerRsvp("name")}
                 />
                 {rsvpErrors.name && (
-                  <p className="mt-1 text-xs text-red-500 ">
+                  <p className="mt-1 text-xs text-wedding-error">
                     {rsvpErrors.name.message}
                   </p>
                 )}
@@ -202,7 +202,7 @@ export default function RSVPForm() {
                   {...registerRsvp("email")}
                 />
                 {rsvpErrors.email && (
-                  <p className="mt-1 text-xs text-red-500 ">
+                  <p className="mt-1 text-xs text-wedding-error">
                     {rsvpErrors.email.message}
                   </p>
                 )}
@@ -223,7 +223,7 @@ export default function RSVPForm() {
                   <option value="maybe">Maybe, I&apos;ll let you know</option>
                 </select>
                 {rsvpErrors.attendance && (
-                  <p className="mt-1 text-xs text-red-500 ">
+                  <p className="mt-1 text-xs text-wedding-error">
                     {rsvpErrors.attendance.message}
                   </p>
                 )}
@@ -243,7 +243,7 @@ export default function RSVPForm() {
                   {...registerRsvp("numberOfGuests", { valueAsNumber: true })}
                 />
                 {rsvpErrors.numberOfGuests && (
-                  <p className="mt-1 text-xs text-red-500 ">
+                  <p className="mt-1 text-xs text-wedding-error">
                     {rsvpErrors.numberOfGuests.message}
                   </p>
                 )}
@@ -288,22 +288,22 @@ export default function RSVPForm() {
 
             {wishesStatus === "success" && (
               <motion.div
-                className="mb-6 p-4 bg-green-50 border border-green-200 rounded-lg"
+                className="mb-6 p-4 bg-wedding-success-light border border-wedding-success rounded-lg"
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
               >
-                <p className="text-green-800 font-semibold text-sm">
+                <p className="text-wedding-success font-semibold text-sm">
                   ✓ Thank you for your wishes!
                 </p>
               </motion.div>
             )}
             {wishesStatus === "error" && (
               <motion.div
-                className="mb-6 p-4 bg-red-50 border border-red-200 rounded-lg"
+                className="mb-6 p-4 bg-wedding-error-light border border-wedding-error rounded-lg"
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
               >
-                <p className="text-red-800 font-semibold text-sm">
+                <p className="text-wedding-error font-semibold text-sm">
                   ✗ Failed to send message. Please try again.
                 </p>
               </motion.div>
@@ -326,7 +326,7 @@ export default function RSVPForm() {
                   {...registerWishes("name")}
                 />
                 {wishesErrors.name && (
-                  <p className="mt-1 text-xs text-red-500 ">
+                  <p className="mt-1 text-xs text-wedding-error">
                     {wishesErrors.name.message}
                   </p>
                 )}
@@ -345,7 +345,7 @@ export default function RSVPForm() {
                   {...registerWishes("email")}
                 />
                 {wishesErrors.email && (
-                  <p className="mt-1 text-xs text-red-500 ">
+                  <p className="mt-1 text-xs text-wedding-error">
                     {wishesErrors.email.message}
                   </p>
                 )}
@@ -364,7 +364,7 @@ export default function RSVPForm() {
                   {...registerWishes("message")}
                 />
                 {wishesErrors.message && (
-                  <p className="mt-1 text-xs text-red-500 ">
+                  <p className="mt-1 text-xs text-wedding-error">
                     {wishesErrors.message.message}
                   </p>
                 )}

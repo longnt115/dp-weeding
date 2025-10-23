@@ -13,7 +13,7 @@ export default function Hero() {
     <section
       id="home"
       aria-label="Wedding invitation hero section"
-      className="min-h-screen flex items-center justify-center bg-gradient-to-br from-wedding-light to-[#e8e8e8] relative overflow-hidden px-4 sm:px-6 lg:px-8"
+      className="min-h-screen flex items-center justify-center bg-gradient-to-br from-wedding-light to-wedding-gray100 relative overflow-hidden px-4 sm:px-6 lg:px-8"
     >
       {/* Decorative background elements */}
       <motion.div
@@ -37,9 +37,9 @@ export default function Hero() {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8 }}
         >
-          <div className="aspect-[4/3] sm:aspect-video bg-gradient-to-br from-wedding-gold via-[#c9a961] to-[#8b7d3f] flex items-center justify-center relative">
+          <div className="aspect-[4/3] sm:aspect-video bg-gradient-to-br from-wedding-gold via-wedding-gold-light to-wedding-gold-dark flex items-center justify-center relative">
             {/* Overlay */}
-            <div className="absolute inset-0 bg-black/40 flex items-end justify-center p-4 sm:p-6 md:p-8">
+            <div className="absolute inset-0 bg-wedding-dark/40 flex items-end justify-center p-4 sm:p-6 md:p-8">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}

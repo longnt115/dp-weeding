@@ -79,14 +79,14 @@ export default function Countdown() {
       <div className="relative">
         <div className="w-14 sm:w-16 md:w-20 lg:w-24 flex items-center justify-center">
           <span
-            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-white"
+            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl barlow-semibold text-white"
             aria-live="polite"
           >
             {String(value).padStart(2, "0")}
           </span>
         </div>
       </div>
-      <p className="mt-2 sm:mt-3 text-white font-semibold text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl alex-brush-regular">
+      <p className="mt-2 sm:mt-3 text-white text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl alex-brush-regular">
         {label}
       </p>
     </div>
@@ -95,9 +95,9 @@ export default function Countdown() {
   return (
     <section
       aria-labelledby="countdown-heading"
-      className="px-4 sm:px-6 py-10 sm:py-12 md:py-16 bg-gradient-to-r from-wedding-light to-[#e8e8e8]"
+      className="px-4 sm:px-6 py-10 sm:py-12 md:py-16 bg-gradient-to-r from-wedding-light to-wedding-gray100"
     >
-      <div className="rounded-2xl sm:rounded-3xl mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl bg-gray-600">
+      <div className="rounded-2xl sm:rounded-3xl mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl bg-gray-800">
         <motion.div
           className="text-center mb-6 sm:mb-8 md:mb-12"
           initial={{ opacity: 0, y: -30 }}
@@ -107,11 +107,11 @@ export default function Countdown() {
         >
           <h2
             id="countdown-heading"
-            className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-2 pt-4 sm:pt-5 md:pt-6"
+            className="text-3xl sm:text-4xl md:text-5xl text-white mb-2 pt-4 sm:pt-5 md:pt-6 barlow-regular"
           >
             Counting Days
           </h2>
-          <h4 className="text-sm sm:text-base text-gray-300 px-4">
+          <h4 className="text-sm sm:text-base px-4 barlow-thin text-wedding-light">
             We can&apos;t wait to celebrate with you!
           </h4>
         </motion.div>
