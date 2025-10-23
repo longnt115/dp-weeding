@@ -71,10 +71,17 @@ export default function Countdown() {
     label: string;
     className?: string;
   }) => (
-    <div className={`flex flex-col items-center ${className}`}>
+    <div
+      className={`flex flex-col items-center ${className}`}
+      role="timer"
+      aria-label={`${value} ${label} remaining until wedding`}
+    >
       <div className="relative">
         <div className="w-14 sm:w-16 md:w-20 lg:w-24 flex items-center justify-center">
-          <span className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-white">
+          <span
+            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-white"
+            aria-live="polite"
+          >
             {String(value).padStart(2, "0")}
           </span>
         </div>
@@ -86,7 +93,10 @@ export default function Countdown() {
   );
 
   return (
-    <section className="px-4 sm:px-6 py-10 sm:py-12 md:py-16 bg-linear-to-r from-wedding-light to-[#e8e8e8]">
+    <section
+      aria-labelledby="countdown-heading"
+      className="px-4 sm:px-6 py-10 sm:py-12 md:py-16 bg-gradient-to-r from-wedding-light to-[#e8e8e8]"
+    >
       <div className="rounded-2xl sm:rounded-3xl mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl bg-gray-600">
         <motion.div
           className="text-center mb-6 sm:mb-8 md:mb-12"
@@ -95,7 +105,10 @@ export default function Countdown() {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-2 pt-4 sm:pt-5 md:pt-6">
+          <h2
+            id="countdown-heading"
+            className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-2 pt-4 sm:pt-5 md:pt-6"
+          >
             Counting Days
           </h2>
           <h4 className="text-sm sm:text-base text-gray-300 px-4">

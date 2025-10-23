@@ -23,15 +23,15 @@ export default function Button({
   type = "button",
 }: ButtonProps) {
   const baseStyles =
-    "font-semibold rounded-lg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2";
+    "font-semibold rounded-lg transition-colors duration-200 focus:outline-none focus:ring-4 focus:ring-offset-2";
 
   const variantStyles = {
     primary:
-      "bg-wedding-dark text-white hover:bg-gray-800 focus:ring-wedding-dark",
+      "bg-wedding-dark text-white hover:bg-gray-800 focus:ring-wedding-gold focus:ring-opacity-50",
     secondary:
-      "bg-wedding-light text-wedding-dark hover:bg-wedding-border focus:ring-wedding-gold",
+      "bg-wedding-light text-wedding-dark hover:bg-wedding-border focus:ring-wedding-gold focus:ring-opacity-50",
     outline:
-      "border-2 border-wedding-gold text-wedding-gold hover:bg-yellow-50 focus:ring-wedding-gold",
+      "border-2 border-wedding-gold text-wedding-gold hover:bg-yellow-50 focus:ring-wedding-gold focus:ring-opacity-50",
   };
 
   const sizeStyles = {

@@ -82,7 +82,7 @@ export default function Events() {
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-3 sm:mb-4 text-wedding-dark">
             Wedding Events
           </h2>
-          <div className="w-12 sm:w-16 h-1 bg-linear-to-r from-wedding-gold to-[#c9a961] mx-auto mb-3 sm:mb-4" />
+          <div className="w-12 sm:w-16 h-1 bg-gradient-to-r from-wedding-gold to-[#c9a961] mx-auto mb-3 sm:mb-4" />
           <p className="text-base sm:text-lg text-wedding-secondary max-w-2xl mx-auto px-4">
             Important dates, times, and locations for our celebration
           </p>
@@ -113,7 +113,7 @@ export default function Events() {
                   className="flex-shrink-0 mt-1"
                   whileHover={{ scale: 1.2 }}
                 >
-                  <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-linear-to-br from-wedding-gold to-[#c9a961] flex items-center justify-center text-wedding-dark text-base sm:text-lg font-bold shadow-md">
+                  <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-gradient-to-br from-wedding-gold to-[#c9a961] flex items-center justify-center text-wedding-dark text-base sm:text-lg font-bold shadow-md">
                     {index + 1}
                   </div>
                 </motion.div>

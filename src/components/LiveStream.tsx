@@ -48,7 +48,7 @@ export default function LiveStream() {
   };
 
   return (
-    <section className="py-10 sm:py-12 md:py-16 bg-linear-to-r from-wedding-light to-white px-4 sm:px-6">
+    <section className="py-10 sm:py-12 md:py-16 bg-gradient-to-r from-wedding-light to-white px-4 sm:px-6">
       <Container>
         <motion.div
           className="text-center mb-8 sm:mb-10 md:mb-12"
@@ -80,7 +80,7 @@ export default function LiveStream() {
               className="relative group overflow-hidden rounded-xl sm:rounded-2xl shadow-lg"
             >
               <div
-                className={`bg-linear-to-br ${platform.color} ${platform.hoverColor} transition-all duration-300 p-8 h-full flex flex-col items-center justify-center text-white`}
+                className={`bg-gradient-to-br ${platform.color} ${platform.hoverColor} transition-all duration-300 p-8 h-full flex flex-col items-center justify-center text-white`}
               >
                 {/* Animated background elements */}
                 <motion.div

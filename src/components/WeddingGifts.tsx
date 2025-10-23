@@ -57,7 +57,7 @@ export default function WeddingGifts() {
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-3 sm:mb-4 text-wedding-dark">
             Wedding Gifts
           </h2>
-          <div className="w-12 sm:w-16 h-1 bg-linear-to-r from-wedding-gold to-[#c9a961] mx-auto mb-3 sm:mb-4" />
+          <div className="w-12 sm:w-16 h-1 bg-gradient-to-r from-wedding-gold to-[#c9a961] mx-auto mb-3 sm:mb-4" />
           <p className="text-base sm:text-lg text-wedding-secondary max-w-2xl mx-auto px-4">
             Kehadiran Anda adalah hadiah terbesar bagi kami. Namun jika Anda
             ingin memberikan hadiah, berikut beberapa pilihan
@@ -78,9 +78,9 @@ export default function WeddingGifts() {
               whileHover={{ y: -10 }}
               className="relative group"
             >
-              <div className="bg-linear-to-br from-wedding-light to-gray-100 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 h-full flex flex-col border border-wedding-border">
+              <div className="bg-gradient-to-br from-wedding-light to-gray-100 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 h-full flex flex-col border border-wedding-border">
                 {/* Decorative top border */}
-                <div className="absolute top-0 left-0 right-0 h-1 bg-linear-to-r from-wedding-gold to-[#c9a961] rounded-t-2xl" />
+                <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-wedding-gold to-[#c9a961] rounded-t-2xl" />
                 <div className="text-5xl mb-4">{gift.icon}</div>
                 <h3 className="text-2xl font-bold text-wedding-dark mb-3">
                   {gift.title}
