@@ -262,6 +262,16 @@ body {
 .swiper-slide {
   background-position: center;
   background-size: cover;
-  width: 300px !important;
-  height: 300px !important;
+  width: 240px !important;
+  height: 350px !important;
+
+  .swiper-slide-shadow-left {
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+  }
+
+  .swiper-slide-shadow-right {
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+  }
 }

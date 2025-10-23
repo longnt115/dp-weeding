@@ -17,7 +17,7 @@ export default function OurStory() {
       className="py-8 sm:py-12 md:py-16 bg-gradient-to-b from-wedding-light to-wedding-gray100 mx-auto px-4 sm:px-6"
     >
       <motion.div
-        className="text-center mb-8 sm:mb-12 md:mb-16"
+        className="text-center"
         initial={{ opacity: 0, y: -30 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
@@ -46,40 +46,44 @@ export default function OurStory() {
         slidesPerView={"auto"}
         coverflowEffect={{
           rotate: 0,
-          stretch: -100,
+          stretch: -50,
           depth: 100,
           modifier: 1,
           slideShadows: true,
         }}
+        initialSlide={1}
         pagination={{
           clickable: true,
           dynamicBullets: true,
         }}
         modules={[EffectCoverflow, Pagination]}
-        className="mySwiper mb-8 sm:mb-12 md:mb-16"
+        className="mySwiper my-8 sm:my-12 md:my-16"
       >
         <SwiperSlide>
           <Image
             alt="Couple's first meeting"
-            width={300}
-            height={300}
+            width={240}
+            height={350}
             src="https://swiperjs.com/demos/images/nature-1.jpg"
+            className="rounded-2xl shadow-lg"
           />
         </SwiperSlide>
         <SwiperSlide>
           <Image
             alt="Couple's first meeting"
-            width={300}
-            height={300}
+            width={240}
+            height={350}
             src="https://swiperjs.com/demos/images/nature-2.jpg"
+            className="rounded-2xl shadow-lg"
           />
         </SwiperSlide>
         <SwiperSlide>
           <Image
             alt="Couple's first meeting"
-            width={300}
-            height={300}
+            width={240}
+            height={350}
             src="https://swiperjs.com/demos/images/nature-3.jpg"
+            className="rounded-2xl shadow-lg"
           />
         </SwiperSlide>
       </Swiper>
@@ -92,7 +96,7 @@ export default function OurStory() {
         transition={{ duration: 0.6, delay: 0.2 }}
         viewport={{ once: true }}
       >
-        <div className="flex flex-col sm:flex-row justify-center items-center mb-8 gap-6 sm:gap-8 md:gap-12 lg:gap-16">
+        <div className="flex flex-row justify-center items-center mb-8 gap-6 sm:gap-8 md:gap-12 lg:gap-16">
           {/* Groom */}
           <div className="text-center flex flex-col w-full sm:w-auto">
             <div className="w-32 h-32 sm:w-40 sm:h-40 md:w-52 md:h-52 lg:w-60 lg:h-60 mx-auto mb-4 sm:mb-6 rounded-2xl overflow-hidden shadow-xl bg-wedding-gray100">
@@ -224,7 +228,7 @@ export default function OurStory() {
                 Tháng 12
               </span>
               <span
-                className="py-[0.5rem] px-4 sm:px-7 lg:px-10 text-2xl sm:text-3xl md:text-4xl lg:text-5xl alex-brush-regular border-solid border-x-3 border-gray-800 text-wedding-gold-light"
+                className="py-[0.5rem] px-4 sm:px-7 lg:px-10 text-2xl sm:text-3xl md:text-4xl lg:text-5xl alex-brush-regular border-solid border-x-1 sm:border-x-3 border-gray-800 text-wedding-gold-light"
                 style={{ fontWeight: "semibold" }}
               >
                 27
