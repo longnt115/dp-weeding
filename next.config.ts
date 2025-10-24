@@ -8,6 +8,12 @@ const nextConfig: NextConfig = {
         hostname: 'swiperjs.com',
         port: '',
         pathname: '/demos/images/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'promes.vn',
+        port: '',
+        pathname: '/wp-content/uploads/**',
       }
     ],
   },
